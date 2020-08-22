@@ -17,7 +17,7 @@ footer,
 header,
 main,
 menu,
-nav,
+/*nav,*/
 section,
 summary {
   display: block;
@@ -619,4 +619,14 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+.container {
+  max-width: 1280px;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+img {
+  margin: auto;
 }
