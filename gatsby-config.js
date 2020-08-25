@@ -21,8 +21,8 @@ module.exports = {
         name: `AnimalVet`,
         short_name: `AV`,
         start_url: `/`,
-        background_color: `##CF315E`,
-        theme_color: `##CF315E`,
+        background_color: `#CF315E`,
+        theme_color: `#CF315E`,
         display: `minimal-ui`,
         icon: `src/images/gtech-icon.png`, // This path is relative to the root of the site.
       },

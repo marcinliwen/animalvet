@@ -630,3 +630,43 @@ pre tt:after {
 img {
   margin: auto;
 }
+#welcome{
+  padding-top: 65px;
+  height: 100vh;
+}
+.welcome-img {
+  position: absolute;
+  width: 60%;
+  max-width: 421px;
+  margin-left: auto;
+  right: 0;
+  top: 65px;
+}
+
+.welcome-content {
+  width: 40%;
+ 
+}
+
+section#welcome .container {
+  display: flex;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+button {
+  background: #ff6290;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+body{
+  background: #7acdffd4;
+}
+h1{
+  color: #ff6290;
+    font-weight: 900;
+}
