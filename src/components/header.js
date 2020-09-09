@@ -85,6 +85,17 @@ const Header = (props) => {
         </Link>
         <Link className="navbar-item" 
           activeClass="active"
+          to="/blog"
+          //spy={true}
+          //smooth={true}
+          //offset={-65}
+          //duration={1000}
+          onClick={toggleHamburger}
+        >
+          Blog
+        </Link>
+        <Link className="navbar-item" 
+          activeClass="active"
           to="/kontakt"
           onClick={toggleHamburger}
         >

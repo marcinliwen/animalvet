@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `AnimalVet `,
-    description: `Gabinet Weterynaryjny - AnimalVet`,
+    description: `Gabinet Weterynaryjny - AnimalVet. Opieka, leczenie, porady.`,
     author: `MarcinL`,
   },
   plugins: [

@@ -640,11 +640,11 @@ img {
   max-width: 421px;
   margin-left: auto;
   right: 0;
-  top: 65px;
+  bottom: 25%;
 }
 
 .welcome-content {
-  width: 40%;
+  width: 100%;
  
 }
 
@@ -653,7 +653,7 @@ section#welcome .container {
   position: relative;
   height: 100%;
   overflow: hidden;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 button {
@@ -664,9 +664,26 @@ button {
   border-radius: 6px;
 }
 body{
-  background: #7acdffd4;
+  background: #8cd4ff;
 }
 h1{
   color: #ff6290;
     font-weight: 900;
+}
+.welcome-content h1 {
+  margin-bottom: 100px;
+  font-size: 63px;
+  margin-top: 50px;
+}
+.welcome-content p {
+  width: 50%;
+}
+
+.welcome-opening {
+  background: #ff6290;
+  padding: 16px;
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+  color: #fff;
+  margin-top: auto;
 }

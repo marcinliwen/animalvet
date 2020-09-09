@@ -49,6 +49,7 @@
     transition-duration: 0.4s;
     width: calc(100% - 76px);
     padding-top: 46px;
+    background: #8cd4ff;
   }
   .nav_back{
     position: fixed;
@@ -56,8 +57,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-  
-    z-index: -1;
+    z-index: 0;
     transition-duration: 0.4s;
     opacity: 0;
     visibility: hidden;
@@ -71,6 +71,7 @@
       transition-duration: 0.4s;
       opacity: 1;
       visibility: visible;
+      background: #00000057;
     }
     nav.-open {
       right: 0;
@@ -85,6 +86,7 @@
     padding: 16px;
     margin: 0;
     text-align: center;
+    color: #FF6292;
   }
   .navbar-burger.burger {
     position: absolute;
@@ -119,7 +121,7 @@
     color: #fff;
   }
   .contact, .contact a{
-    color: #2b2b2b;
+    color: #FF6292;;
     text-decoration: none;
   }
   contact.mobile {
@@ -161,6 +163,7 @@
 .logo {
     line-height: 22px;
     font-size: 28px;
+    color: #000;
 }
 
 .logo >div:nth-child(1) {

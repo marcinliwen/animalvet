@@ -14,13 +14,17 @@ const IndexPage = props => (
       <div className="container">
         <div className="welcome-content">
           <h1>AnimalVet</h1>
-          <p>Klinika weterynaryjna małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
+          <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
           <button>Umów wizytę</button>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
         </div>
-        
+        <div className="welcome-opening"> 
+          <div>Jesteśmy otwarci:</div>
+          <div className="days">Pn - Pt</div>
+          <div className="hours">10:00 - 16:00</div>
+        </div>
         
        
       </div>
