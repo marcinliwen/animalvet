@@ -156,20 +156,23 @@
   .header .logo-container {
     width: min-content;
     margin-right: auto;
-    width: 46px;
+    width: 50px;
   }
   
 
 .logo {
     line-height: 22px;
     font-size: 28px;
-    color: #000;
+    color: #FF628B;
 }
 
 .logo >div:nth-child(1) {
     font-size: 16px;
     line-height: 16px;
     letter-spacing: -1px;
+}
+.logo >div:nth-child(2){
+  font-weight: 900;
 }
   @media(min-width:760px){
     .header{

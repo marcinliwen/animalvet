@@ -615,6 +615,9 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+p, h1, h2, h3, h4, h5, h6{
+  margin-bottom: 0;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -645,7 +648,7 @@ img {
 
 .welcome-content {
   width: 100%;
- 
+ max-width: 400px;
 }
 
 section#welcome .container {
@@ -672,7 +675,7 @@ h1{
 }
 .welcome-content h1 {
   margin-bottom: 100px;
-  font-size: 63px;
+  font-size: 48px;
   margin-top: 50px;
 }
 .welcome-content p {
@@ -682,8 +685,91 @@ h1{
 .welcome-opening {
   background: #ff6290;
   padding: 16px;
-  border-radius: 6px 6px 0 0;
-  width: 100%;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  margin-right: -15px;
   color: #fff;
   margin-top: auto;
 }
+.welcome-content h1:after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: #ff6290;
+  display: block;
+  margin-top: 15px;
+}
+.welcome-opening {
+  display: flex;
+}
+
+.welcome-opening > div {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-opening > div:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+section#uslugi {
+  background: #fff;
+  padding: 76px 0;
+}
+
+.uslugi-header h2 {
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 48px;
+  margin-bottom: 36px;
+}
+
+.uslugi-header p {font-size: 14px;line-height: 24px;padding-bottom: 36px;margin: 0;}
+
+.uslugi-header {
+  border-bottom: 1px solid #000;
+}
+
+.uslugi-content {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.uslugi-cart {
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #000;
+}
+
+.uslugi-cart-title img {
+  width: 24px;
+  margin: 0;
+  position: relative;
+  z-index: 9;
+}
+
+.uslugi-cart-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.uslugi-cart p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.uslugi-cart-title h3 {
+  font-size: 18px;
+  font-variant-caps: petite-caps;
+}
+
+.uslugi-cart-title .uslugi-icon {
+  margin-right: 30px;
+  display: block;
+  position: relative;
+}
+.uslugi-cart-title .uslugi-icon:after {content: "";width: 32px;height: 32px;background: #8cd4ff57;position: absolute;z-index: 0;border-radius: 50%;left: 8px;top: -13px;}
