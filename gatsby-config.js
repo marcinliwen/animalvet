@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#CF315E`,
         theme_color: `#CF315E`,
         display: `minimal-ui`,
-        icon: `src/images/gtech-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/animal_logo.png`, // This path is relative to the root of the site.
       },
     },
     //{
