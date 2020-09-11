@@ -639,7 +639,7 @@ img {
 }
 .welcome-img {
   position: absolute;
-  width: 60%;
+  width: 57%;
   max-width: 421px;
   margin-left: auto;
   right: 0;
@@ -657,6 +657,7 @@ section#welcome .container {
   height: 100%;
   overflow: hidden;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 button {
@@ -664,7 +665,9 @@ button {
   color: #fff;
   border: none;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 4px;
+  margin: 36px 0;
+  cursor: pointer;
 }
 body{
   background: #8cd4ff;
@@ -680,6 +683,7 @@ h1{
 }
 .welcome-content p {
   width: 50%;
+  margin-bottom: 36px;
 }
 
 .welcome-opening {
@@ -712,7 +716,7 @@ h1{
 }
 
 .welcome-opening > div:not(:last-child) {
-  border-right: 1px solid #fff;
+  border-right: 1px solid #ffffff80;
 }
 section#uslugi {
   background: #fff;
@@ -773,3 +777,70 @@ section#uslugi {
   position: relative;
 }
 .uslugi-cart-title .uslugi-icon:after {content: "";width: 32px;height: 32px;background: #8cd4ff57;position: absolute;z-index: 0;border-radius: 50%;left: 8px;top: -13px;}
+.uslugi-content button {
+  margin-left: auto;
+  margin-right: auto;
+}
+.uslugi-cart.for-btn {
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+@media(min-width: 760px){
+  .uslugi-cart {
+    width: calc(100%/3);
+    border: none;
+    padding-right: 5%;
+}
+.uslugi-cart.for-btn{
+  text-align: left;
+}
+.welcome-opening {
+  margin-left: 0;
+  margin-right: 0;
+  width: 70%;
+}
+
+.welcome-opening > div {
+  padding: 25px 0;
+}
+.welcome-img {
+  margin-left: 0;
+  max-width: 550px;
+  bottom: 0;
+  z-index: -1;
+  margin-right: 50px;
+}
+
+.welcome-content {
+  max-width: 500px;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-content h1 {
+  margin-bottom: 60px;
+  font-size: 74px;
+}
+
+.welcome-content button {
+  width: max-content;
+  padding: 8px 25px;
+}
+.uslugi-header {
+  display: flex;
+}
+
+.uslugi-header h2 {
+  width: calc(100% / 3);
+  line-height: 59px;
+  padding-right: 10%;
+}
+
+.uslugi-header p {
+  display: block;
+  line-height: 32px;
+  width: calc(2*(100%/3));
+}
+}

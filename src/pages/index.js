@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import Button from "../components/Button"
+
 import control from "../images/control.svg"
 import rtg from "../images/rtg.svg"
 import profilactic from "../images/profilactic.svg"
@@ -19,7 +21,7 @@ const IndexPage = props => (
         <div className="welcome-content">
           <h1>AnimalVet</h1>
           <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
-          <button>Umów wizytę</button>
+        <Button color="#fff" background="#ff6290">Umów wizytę</Button>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
@@ -76,6 +78,10 @@ const IndexPage = props => (
               <p>Wykonujemy szczepienia psów, kotów oraz królików. Zarówno te wstępne jak i coroczne.</p>
             </div>
           </div>
+          <div className="uslugi-cart for-btn">
+            <Button color="#fff" background="#ff6290">Poznaj nasze usługi </Button>
+          </div>
+          
         </div>
       </div>
     </section>
