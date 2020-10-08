@@ -788,6 +788,13 @@ section#uslugi {
   padding: 0;
   text-align: center;
 }
+.uslugi-header h2::first-line {
+  line-height: 34px;
+}
+.uslugi-header p::first-line {
+  line-height: 34px;
+}
+
 @media(min-width: 770px){
   .uslugi-cart {
     width: calc(100%/3);
@@ -796,13 +803,18 @@ section#uslugi {
 }
 .uslugi-cart.for-btn{
   text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .welcome-opening {
   margin-left: 0;
   margin-right: 0;
   width: 70%;
 }
-
+.uslugi-content button{
+  margin: 0;
+}
 .welcome-opening > div {
   padding: 25px 0;
 }

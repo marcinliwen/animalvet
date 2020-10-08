@@ -13,6 +13,8 @@ import control from "../images/control.svg"
 import rtg from "../images/rtg.svg"
 import profilactic from "../images/profilactic.svg"
 import vaccine from "../images/vaccine.svg"
+import bandage from "../images/bandage.svg"
+
 const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
@@ -76,6 +78,15 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy szczepienia psów, kotów oraz królików. Zarówno te wstępne jak i coroczne.</p>
+            </div>
+          </div>
+          <div className="uslugi-cart">
+            <div className="uslugi-cart-title">
+              <div className="uslugi-icon"><img src={bandage} alt="Ortopedia"/></div>
+              <h3>Ortopedia</h3>
+            </div>
+            <div className="desc">
+              <p>Wykonujemy osteosyntezę, leczenie zerwanych więzadeł oraz wad kostnych wrodzonych i nabytych.</p>
             </div>
           </div>
           <div className="uslugi-cart for-btn">
