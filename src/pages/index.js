@@ -27,7 +27,7 @@ const IndexPage = props => (
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
         </div>
         <div className="welcome-opening"> 
-          <div>Jesteśmy otwarci:</div>
+          <div className="address">Zasieki 4B</div>
           <div className="days">Pn - Pt</div>
           <div className="hours">10:00 - 16:00</div>
         </div>

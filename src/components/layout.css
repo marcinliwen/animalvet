@@ -635,7 +635,8 @@ img {
 }
 #welcome{
   padding-top: 65px;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
 }
 .welcome-img {
   position: absolute;
@@ -643,7 +644,9 @@ img {
   max-width: 421px;
   margin-left: auto;
   right: 0;
-  bottom: 25%;
+  bottom: 55px;
+  z-index: -1;
+  max-height: 100%;
 }
 
 .welcome-content {
@@ -654,7 +657,6 @@ img {
 section#welcome .container {
   display: flex;
   position: relative;
-  height: 100%;
   overflow: hidden;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -786,7 +788,7 @@ section#uslugi {
   padding: 0;
   text-align: center;
 }
-@media(min-width: 760px){
+@media(min-width: 770px){
   .uslugi-cart {
     width: calc(100%/3);
     border: none;

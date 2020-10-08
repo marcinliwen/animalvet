@@ -62,7 +62,7 @@
     opacity: 0;
     visibility: hidden;
   }
-  @media(max-width: 767px){
+  @media(max-width: 770px){
     body.menu-open {
       overflow: hidden;
     }
@@ -174,7 +174,7 @@
 .logo >div:nth-child(2){
   font-weight: 900;
 }
-  @media(min-width:760px){
+  @media(min-width:770px){
     .header{
       }
       .header .container{
