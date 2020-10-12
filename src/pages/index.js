@@ -14,6 +14,9 @@ import rtg from "../images/rtg.svg"
 import profilactic from "../images/profilactic.svg"
 import vaccine from "../images/vaccine.svg"
 import bandage from "../images/bandage.svg"
+import calendar from "../images/calendar.svg"
+import location from "../images/location.svg"
+import time from "../images/time.svg"
 
 const IndexPage = props => (
   <Layout>
@@ -29,9 +32,9 @@ const IndexPage = props => (
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
         </div>
         <div className="welcome-opening"> 
-          <div className="address">Zasieki 4B</div>
-          <div className="days">Pn - Pt</div>
-          <div className="hours">10:00 - 16:00</div>
+          <div className="address"><img src={location} alt="Lokacja"/>Zasieki 4B</div>
+          <div className="days"><img src={calendar} alt="Kalendarz"/>Pn - Pt</div>
+          <div className="hours"><img src={time} alt="Czas"/>10:00 - 16:00</div>
         </div>
         
        
