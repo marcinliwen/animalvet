@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import ArrowRight from "../components/Icons/ArrowR"
+
 import Button from "../components/Button"
 
 import control from "../images/control.svg"
@@ -54,6 +56,7 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy badanie przed wyjazdem z kraju, chipowanie oraz wystawiamy paszporty.</p>
+              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
           <div className="uslugi-cart">
@@ -63,6 +66,7 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy zdjęcia RTG.</p>
+              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
           <div className="uslugi-cart">
@@ -72,6 +76,7 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy badania krwi, moczu oraz wysyłamy próbki tkanek w przypadku badań histologicznych i cytologicznych.Prowadzimy diagnostykę alergii, chorób zakaźnych i genetycznych.</p>
+              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
           <div className="uslugi-cart">
@@ -81,6 +86,7 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy szczepienia psów, kotów oraz królików. Zarówno te wstępne jak i coroczne.</p>
+              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
           <div className="uslugi-cart">
@@ -90,6 +96,7 @@ const IndexPage = props => (
             </div>
             <div className="desc">
               <p>Wykonujemy osteosyntezę, leczenie zerwanych więzadeł oraz wad kostnych wrodzonych i nabytych.</p>
+              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
           <div className="uslugi-cart for-btn">

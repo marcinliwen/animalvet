@@ -797,7 +797,25 @@ section#uslugi {
 .uslugi-header p::first-line {
   line-height: 34px;
 }
+.uslugi-more span {
+  font-size: 14px;
+  margin-right: 12px;
+  font-variant-caps: petite-caps;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 
+.uslugi-more {
+  margin: 25px 0 0 0;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.uslugi-more svg {
+  height: 12px;
+  width: 24px;
+}
 @media(min-width: 770px){
   .uslugi-cart {
     width: calc(100%/3);
