@@ -10,6 +10,7 @@ import SEO from "../components/seo"
 import ArrowRight from "../components/Icons/ArrowR"
 
 import Button from "../components/Button"
+import Officecounter from "../components/Officecounter"
 
 import control from "../images/control.svg"
 import rtg from "../images/rtg.svg"
@@ -106,6 +107,21 @@ const IndexPage = props => (
         </div>
       </div>
     </section>
+    <section id="office">
+      <div className="container">
+        <div className="office-container">
+          <div className="office-title"><h3>O nas</h3></div>
+          <div className="office-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <Officecounter />
+        </div>
+        <div className="office-img">
+        <Img fluid={props.data.imgOffice.childImageSharp.fluid} />
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 
@@ -114,6 +130,13 @@ export default IndexPage
 export const pageQuery = graphql`
 query {
   imgOne : file(relativePath: {eq: "cat_03.png"}) {
+    childImageSharp {
+      fluid{
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
+  imgOffice : file(relativePath: {eq: "office.jpg"}){
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid

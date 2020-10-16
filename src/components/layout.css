@@ -816,6 +816,76 @@ section#uslugi {
   height: 12px;
   width: 24px;
 }
+section#office {
+  background: #fafafa;
+  padding-top: 54px;
+}
+
+.office-title h3 {
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 48px;
+  margin-bottom: 36px;
+}
+
+.office-text p {
+  font-size: 14px;
+  line-height: 24px;
+  padding-bottom: 36px;
+  margin: 0;
+}
+
+.office-img {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.office-counter:before {content: "";position: absolute;top: 0;left: 0;width: 80%;height: 1px;background: #000;}
+
+.office-counter {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.counter-num {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.counter-title {
+  font-size: 14px;
+  text-transform: lowercase;
+  line-height: 16px;
+}
+@media (min-width: 700px){
+  #office .container {
+    display: flex;
+  }
+
+  .office-container {
+      width: 60%;
+  }
+
+  .office-img {
+      width: 40%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+  }
+
+  .office-img .gatsby-image-wrapper {
+      margin-top: auto;
+      margin-bottom: auto;
+      display: block;
+      width: 100%;
+  }
+  .counter-element {max-width: 100px;margin-right: 15px;}
+  .office-text {
+    padding-right: 50px;
+  }
+}
 @media(min-width: 770px){
   .uslugi-cart {
     width: calc(100%/3);
@@ -885,4 +955,21 @@ section#uslugi {
   line-height: 32px;
   width: calc(2*(100%/3));
 }
+
+}
+@media(min-width: 900px){
+  section#office {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 54px;
+}
+
+section#office:after {content: "";position: absolute;background: #fafafa;display: block;top: 0;left: 0;bottom: 0;width: 80%;z-index: -1;}
+
+}
+@media(min-width:1280px){
+  section#office:after{
+    width: calc(((100% - 1280px) / 2) + 1024px);
+  }
 }
