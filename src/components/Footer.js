@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import facebook from "../images/facebook.svg"
+import instagram from "../images/instagram.svg"
+
 const Footer =() =>(
     <div id="footer">
         <div className="container">
@@ -20,8 +23,8 @@ const Footer =() =>(
                     </div>
                     <div className="footer-social">
                     <ul>
-                        <li>Fb</li>
-                        <li>Inst</li>
+                        <li><a target='_blank'  href="https://www.facebook.com/AnimalVet-1331193130342453" title="facebook"><img src={facebook} alt="facebook" /></a></li>
+                        <li><img src={instagram} alt="instagram" /></li>
                     </ul>
                 </div>
                 </div>
@@ -58,8 +61,8 @@ const Footer =() =>(
                 <div className="footer-company">© 2020 - AnimalVet. With love for you</div>
                 <div className="footer-social">
                     <ul>
-                        <li>Fb</li>
-                        <li>Ins</li>
+                        <li><a target='_blank'  href="https://www.facebook.com/AnimalVet-1331193130342453" title="facebook"><img src={facebook} alt="facebook" /></a></li>
+                        <li><img src={instagram} alt="instagram" /></li>
                     </ul>
                 </div>
             </div>
