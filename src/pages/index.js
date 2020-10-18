@@ -122,6 +122,25 @@ const IndexPage = props => (
         </div>
       </div>
     </section>
+    <section id="clients">
+      <div className="container row">
+        <div className="col-4 client-titles">
+          <h2>Zaufali nam</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <Button color="#fff" background="#ff6290">Nasi pacjenci</Button>
+        </div>
+        <div className="col-8 row clients-item">
+          <div className="col-6 clients-text">
+            <p><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</q></p>
+            <p><b>Właścicielka Bengali</b></p>
+          </div>
+          <div className="col-6">
+          <Img fluid={props.data.bengal.childImageSharp.fluid} />
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 
@@ -137,6 +156,13 @@ query {
     }
   },
   imgOffice : file(relativePath: {eq: "office.jpg"}){
+    childImageSharp {
+      fluid{
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
+  bengal : file(relativePath: {eq: "bengal.jpg"}){
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid
