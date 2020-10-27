@@ -5,6 +5,7 @@ import React, {useState, useEffect} from "react"
 
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
+import phone from "./../images/phone.svg"
 
 import "./header.css"
 
@@ -35,7 +36,7 @@ const Header = (props) => {
       }
     </div>
          
-    <div className="header">
+    <div className="header main-background">
       <div className="container">
         <div className="logo-container">
         <Link
@@ -106,7 +107,12 @@ const Header = (props) => {
         </nav>
         <div className="nav_back"  onClick={toggleHamburger}></div>
         <div className="h_banner">
-        <div className="contact"><a href="tel:+48600700800">600 700 800</a></div>
+        <div className="contact">
+          <a href="tel:+48600700800">
+            <img src={phone} width="16px" height="16px" alt="telefon" style={{marginRight:"8px", verticalAlign:"text-top"}}/>  
+            600 700 800
+            </a>
+        </div>
       </div>
     </div>
     </div>

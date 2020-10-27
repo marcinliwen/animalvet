@@ -86,7 +86,7 @@
     padding: 16px;
     margin: 0;
     text-align: center;
-    color: #FF6292;
+    color: #000;
   }
   .navbar-burger.burger {
     position: absolute;
@@ -121,7 +121,7 @@
     color: #fff;
   }
   .contact, .contact a{
-    color: #FF6292;;
+    color: #000;
     text-decoration: none;
   }
   contact.mobile {

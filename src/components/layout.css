@@ -868,7 +868,7 @@ section#office {
 
 .counter-element {
   width: fit-content;
-  flex: 0;
+  flex: 1;
   padding-right: 16px;
   border-top: 1px solid #333;
 }
@@ -880,12 +880,12 @@ section#office {
 }
 
 .counter-num {
-  font-size: 32px;
+  font-size: 28px;
   margin: 12px 0;
 }
 
 .counter-title {
-  font-size: 14px;
+  font-size: 12px;
   text-transform: lowercase;
   line-height: 16px;
 }
@@ -1061,6 +1061,13 @@ section#office {
 }
 }
 @media(min-width: 770px){
+  .counter-element{
+    flex:0;
+    padding-right: 0;
+  }
+  .counter-element:not(:last-of-type){
+    padding-right: 32px;
+  }
   .uslugi-cart {
     width: calc(100%/3);
     border: none;
