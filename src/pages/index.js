@@ -11,6 +11,7 @@ import ArrowRight from "../components/Icons/ArrowR"
 
 import Button from "../components/Button"
 import Officecounter from "../components/Officecounter"
+import Subscribe from "../components/Subscribe"
 
 import control from "../images/control.svg"
 import rtg from "../images/rtg.svg"
@@ -137,10 +138,12 @@ const IndexPage = props => (
           </div>
           <div className="col-6">
           <Img fluid={props.data.bengal.childImageSharp.fluid} />
+    
           </div>
         </div>
       </div>
     </section>
+    <Subscribe  image={props.data.dog.childImageSharp.fluid}/>
   </Layout>
 )
 
@@ -167,6 +170,13 @@ query {
       fluid{
         ...GatsbyImageSharpFluid
       }
+    }
+  },
+  dog : file(relativePath: {eq: "dog.png"}) {
+    childImageSharp {
+        fluid{
+        ...GatsbyImageSharpFluid
+        }
     }
   }
 }
