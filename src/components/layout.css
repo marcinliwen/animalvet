@@ -651,6 +651,12 @@ p{
   line-height: 24px;
   margin-bottom: 32px;
 }
+.d-block{
+  display: block!important;
+}
+.border-b{
+  border-bottom: 1px solid #000;
+}
 #welcome{
   padding-top: 65px;
   min-height: 100vh;
@@ -761,10 +767,6 @@ section#uslugi {
 }
 
 .uslugi-header p {font-size: 14px;line-height: 24px;padding-bottom: 36px;margin: 0;}
-
-.uslugi-header {
-  border-bottom: 1px solid #000;
-}
 
 .uslugi-content {
   display: flex;

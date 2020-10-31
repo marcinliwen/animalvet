@@ -40,13 +40,11 @@ const IndexPage = props => (
           <div className="days"><img src={calendar} alt="Kalendarz"/>Pn - Pt</div>
           <div className="hours"><img src={time} alt="Czas"/>10:00 - 16:00</div>
         </div>
-        
-       
       </div>
     </section>
     <section id="uslugi">
       <div className="container">
-        <div className="uslugi-header">
+        <div className="uslugi-header border-b">
             <h2>Popularne usługi</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
