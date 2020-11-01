@@ -24,12 +24,12 @@
 }
 
 .subheader .-content h2 {
-    font-size: 22px;
+    font-size: 34px;
     font-weight: 900;
-    line-height: 32px;
+    line-height: 46px;
     margin: 32px 0;
     color: #ff6290;
-    max-width: 170px;
+    max-width: 250px;
 }
 
 .subheader .-content h2:after {content: "";height: 1px;width: 60%;background: #ff6290;display: block;margin-top: 8px;}
