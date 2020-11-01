@@ -100,7 +100,9 @@ const IndexPage = props => (
             </div>
           </div>
           <div className="uslugi-cart for-btn">
+          <Link to="/uslugi" >
             <Button color="#fff" background="#ff6290">Poznaj nasze usługi </Button>
+          </Link>
           </div>
           
         </div>
