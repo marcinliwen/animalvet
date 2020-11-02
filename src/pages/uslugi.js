@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,10 +12,25 @@ import UslugiSection from "../components/UslugiSection"
 
 const Uslugi = (props) => {
   const {frontmatter} = props.data.markdownRemark;
+
+  const {
+    breadcrumb: { crumbs },
+  } = props.pageContext;
+
+  const customCrumbLabel = props.location.pathname.replace('/', ' ');
+
   return(
     <Layout>
     <SEO title="Usługi" />
     <Subheader title={"Traktujemy z miłością"}/>
+    <div className="container">
+    <Breadcrumb
+      crumbs={crumbs}
+      crumbSeparator=" / "
+      crumbLabel={customCrumbLabel}
+    />
+    </div>
+    
     <UslugiSection 
       title={frontmatter.title} 
       services={frontmatter.services}

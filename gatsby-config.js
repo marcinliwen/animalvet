@@ -51,6 +51,23 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        // useAutoGen: required 'true' to use autogen
+        useAutoGen: true,
+        // autoGenHomeLabel: optional 'Home' is default
+        autoGenHomeLabel: `Home`,
+        // exlude: optional, include this array to overwrite paths you don't want to
+        // generate breadcrumbs for.
+        exclude: [
+          `/dev-404-page/`,
+          `/404/`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback/`,
+        ],
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `AnimalVet`,

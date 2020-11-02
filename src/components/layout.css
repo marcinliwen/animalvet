@@ -657,6 +657,14 @@ p{
 .border-b{
   border-bottom: 1px solid #000;
 }
+.breadcrumb__list {
+  list-style: none;
+  display: flex;
+  margin: 25px 0;
+}
+.breadcrumb__list__item:last-of-type {
+  font-weight: 700;
+}
 #welcome{
   padding-top: 65px;
   min-height: 100vh;
