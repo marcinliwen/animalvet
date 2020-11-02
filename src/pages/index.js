@@ -13,6 +13,7 @@ import Button from "../components/Button"
 import Officecounter from "../components/Officecounter"
 import Subscribe from "../components/Subscribe"
 
+import surgery from "../images/surgery-tools.svg"
 import control from "../images/control.svg"
 import rtg from "../images/rtg.svg"
 import profilactic from "../images/profilactic.svg"
@@ -21,6 +22,7 @@ import bandage from "../images/bandage.svg"
 import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
 import time from "../images/time.svg"
+
 
 const IndexPage = props => (
   <Layout>
@@ -51,11 +53,11 @@ const IndexPage = props => (
         <div className="uslugi-content">
           <div className="uslugi-cart">
             <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={control} alt="Badania kontrolne"/></div>
-              <h3>Badania kontrolne</h3>
+              <div className="uslugi-icon"><img src={surgery} alt="Hirurgia"/></div>
+              <h3>Hirurgia</h3>
             </div>
             <div className="desc">
-              <p>Wykonujemy badanie przed wyjazdem z kraju, chipowanie oraz wystawiamy paszporty.</p>
+              <p>Wykonnujemy zabiegi hirurgiczne.</p>
               <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Img from "gatsby-image"
 
@@ -11,14 +12,17 @@ import profilactic from "../images/profilactic.svg"
 import vaccine from "../images/vaccine.svg"
 import bandage from "../images/bandage.svg"
 
-const UslugiSection = () =>(
+const UslugiSection = (props) =>{
+  
+return(
     <section id="uslugi" className="">
       <div className="container">
         <div className="uslugi-header d-block">
-            <h2>Usługi</h2>
-            <p className="border-b col-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h2>{props.title}</h2>
+            <div className="border-b col-8" dangerouslySetInnerHTML={{ __html: props.html }} />
         </div>
-        <div className="uslugi-content">
+       <Services items={props.services} />
+        {/*<div className="uslugi-content">
           <div className="uslugi-cart">
             <div className="uslugi-cart-title">
               <div className="uslugi-icon"><img src={control} alt="Badania kontrolne"/></div>
@@ -69,9 +73,32 @@ const UslugiSection = () =>(
               <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
             </div>
           </div>
-        </div>
+</div>*/}
       </div>
     </section>
 )
+}
+
+const Services = ({items}) =>{
+  return(
+    <div className="uslugi-content">
+    {items.map(item=>(
+      <div className="uslugi-cart">
+      <div className="uslugi-cart-title">
+        <div className="uslugi-icon"><img src={item.image} alt={item.title}/></div>
+        <h3>{item.title}</h3>
+      </div>
+      <div className="desc">
+        <p>{item.text}</p>
+        <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
+      </div>
+    </div>
+    ))}
+  </div>
+  )
+}
 
 export default UslugiSection
+
+
+

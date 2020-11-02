@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
 
@@ -14,10 +15,30 @@ const Subheader = (props) =>(
             <Button color="#fff" background="#ff6290">Umów wizytę</Button>
         </div>
         <div className="-img">
-        <Img fluid={props.image} />
+       <Img fluid={props.data.dogdog.childImageSharp.fluid} />
         </div>
       </div>
     </section>
 )
 
-export default Subheader
+
+export default function MySubheader (props) {return(
+  <StaticQuery 
+    query={
+      graphql`
+        query{
+            dogdog : file(relativePath: {eq: "dog_care.png"}) {
+                childImageSharp {
+                  fluid{
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            },
+          }
+        `
+    }
+    render={(data)=> <Subheader data={data} title={props.title}/>}
+  />
+)
+}
+

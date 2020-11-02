@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import PropTypes from "prop-types"
 import React from "react"
@@ -6,11 +7,11 @@ import React from "react"
 import Img from "gatsby-image"
 
 
-const Subscribe = props =>(
+const Subscribe = ({data}) =>(
     <section id="subscribe" className="main-background">
         <div className="container row">
             <div className="col-4 subscribe-img">
-                <Img  fluid={props.image} />
+                <Img  fluid={data.dog.childImageSharp.fluid} />
             </div>
             <div className="col-8">
                 <h3 className="main-text"><div>Bądź na bierząco,</div>zapisz się do newslettera!</h3>
@@ -26,4 +27,22 @@ const Subscribe = props =>(
         </div>
     </section>
 )
-export default Subscribe
+
+export default ()=>(
+    <StaticQuery 
+      query={
+        graphql`
+          query{
+            dog : file(relativePath: {eq: "dog.png"}) {
+                childImageSharp {
+                    fluid{
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+              },
+            }
+          `
+      }
+      render={(data)=> <Subscribe data={data}/>}
+    />
+  )

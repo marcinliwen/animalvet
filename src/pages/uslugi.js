@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,32 +9,46 @@ import Subscribe from "../components/Subscribe"
 import Subheader from "../components/Subheader"
 import UslugiSection from "../components/UslugiSection"
 
-const Uslugi = (props) => (
+const Uslugi = (props) => {
+  const {frontmatter} = props.data.markdownRemark;
+  return(
     <Layout>
     <SEO title="Usługi" />
-    <Subheader image={props.data.dogcare.childImageSharp.fluid} title={"Traktujemy z miłością"}/>
-    <UslugiSection />
-    <Subscribe  image={props.data.dog.childImageSharp.fluid}/>
+    <Subheader title={"Traktujemy z miłością"}/>
+    <UslugiSection 
+      title={frontmatter.title} 
+      services={frontmatter.services}
+      html={props.data.markdownRemark.html}
+    />
+    <Subscribe />
   </Layout>
-)
+)}
 
 export default Uslugi
 
 export const pageQuery = graphql`
 query{
-    dogcare : file(relativePath: {eq: "dog_care.png"}) {
-        childImageSharp {
-          fluid{
-            ...GatsbyImageSharpFluid
-          }
-        }
-    },
-    dog : file(relativePath: {eq: "dog.png"}) {
-        childImageSharp {
-            fluid{
-            ...GatsbyImageSharpFluid
-            }
-        }
+      markdownRemark{
+        frontmatter {
+          title,
+          services{
+            image,
+            title,
+            text
+          },
+        },
+        html
       }
 }
 `
+/*
+export const productPageQuery = graphql`
+  query ProductPage ($id: String!){
+    markdownRemark (id: { eq: $id }) {
+      frontmatter {
+        title
+      }
+    }
+  }
+`
+*/
