@@ -54,7 +54,7 @@ const IndexPage = props => (
           <div className="uslugi-cart">
             <div className="uslugi-cart-title">
               <div className="uslugi-icon"><img src={surgery} alt="Hirurgia"/></div>
-              <h3>Hirurgia</h3>
+              <h3>Chirurgia</h3>
             </div>
             <div className="desc">
               <p>Wykonnujemy zabiegi hirurgiczne.</p>

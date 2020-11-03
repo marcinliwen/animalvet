@@ -2,7 +2,7 @@
 title: "Usługi"
 services:
     - image: "/img/surgery-tools.svg"
-      title: "hirurgia"
+      title: "chirurgia"
       text: "Wykonujemy zabiegi hirurgiczne"
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       subservices:
