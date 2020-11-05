@@ -11,6 +11,12 @@ import Subheader from "../components/Subheader"
 import Gmap from "../components/Gmap"
 import ContaktForm from "../components/ContaktForm"
 
+import phone from "../images/phone.svg"
+import mail from "../images/mail.svg"
+import locationblack from "../images/location-black.svg"
+
+import "../components/kontakt.css"
+
 const Kontakt = (props) => {
 
     const {
@@ -36,16 +42,46 @@ const Kontakt = (props) => {
                     <h2>Kontakt</h2>
                 </div>
                 <div className="row">
-                    <div className="col-4">
-                        <p>Zasieki 4B</p>
-                        <p>68-343 Zasieki</p>
+                    <div className="col-4 contact__container">
+                      <div className="contakt__open">
+                        <h4>Jesteśmy otwarci:</h4>
+                        <div>poniedziałek - piątek</div>
+                        <div>10:00 - 16:00</div>
+                      </div>
+                      <ul className="contact__list">
+                        <li>
+                          <img src={locationblack} alt="adres" width="16px" />
+                          <p>Zasieki 4B, 68-343 Zasieki</p>
+                        </li>
+                        <li>
+                          <img src={phone} alt="telefon" width="16px" />
+                          <p>+48 506 109 445</p>
+                        </li>
+                        <li>
+                          <img src={mail} alt="mail" width="16px" />
+                          <p>animalvet@gmail.com</p>
+                        </li>
+
+                      </ul>
+                        
+                        <p></p>
                     </div>
                     <div className="col-8">
                     <Gmap />
                     </div>
                 </div>
-                <ContaktForm />
+                
             </div>
+        </section>
+        <section id="kontakt-form" className="background__secondadry">
+          <div className="container">
+            <div className="row">
+              <div className="col-8">
+                <ContaktForm />
+              </div>
+              <div className="col-4"></div>
+            </div>       
+          </div>
         </section>
       <Subscribe />
     </Layout>

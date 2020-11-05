@@ -1,0 +1,27 @@
+.contact__list {
+    list-style: none;
+    margin: 0px;
+}
+.contact__list li * {
+    font-weight: 700;
+    display: inline;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+.contact__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#kontakt {
+    padding: 76px 0;
+}
+.contakt__open {
+    margin-bottom: 25px;
+}
+.contakt__open h4 {
+    margin-bottom: 15px;
+}
+section#kontakt-form {
+    padding: 76px 0;
+}

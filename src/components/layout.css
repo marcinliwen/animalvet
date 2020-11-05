@@ -651,8 +651,17 @@ p{
   line-height: 24px;
   margin-bottom: 32px;
 }
+.mobile{
+  display: block;
+}
+.desctop{
+  display: none;
+}
 .d-block{
   display: block!important;
+}
+.d-flex{
+  display: flex;
 }
 .border-b{
   border-bottom: 1px solid #000;
@@ -703,6 +712,9 @@ section#welcome .container {
 }
 .main-background{
   background: #8cd4ff;
+}
+.background__secondadry{
+  background: #fafafa;
 }
 button {
   background: #ff6290;
@@ -980,17 +992,21 @@ section#office {
 .form-group button {
   margin: 0;
   flex: 1;
-  margin-left: -5px;
 }
 
 .form-group {
   display: flex;
+  flex-wrap: wrap;
   max-width: 600px;
+  margin-bottom: 25px;
 }
-
-.form-group input {
+.form-group label {
+  display: block;
+  width: 100%;
+}
+.form-group input, .form-group textarea {
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   padding: 8px 16px;
   flex: 2;
 }
@@ -1007,9 +1023,22 @@ section#office {
   outline: none;
 }
 @media (min-width: 700px){
-  .col-4 {width: calc(100%/3);}
-  .col-8 {width: calc(2*(100%/3));}
-  .col-6{width:50%}
+  .col-4 {width: calc(100%/3);padding: 0 25px;}
+  .col-8 {width: calc(2*(100%/3));padding: 0 25px}
+  .col-6{width:50%;padding:0 25px}
+  .row{margin:0 -25px; }
+  .container{
+    padding: 0;
+  }
+  .mobile{
+    display: none;
+  }
+  .desctop{
+    display: block;
+  }
+  .form-group textarea{
+    height: calc(3*68px + 25px);
+  }
   .clients-item:after {
     right: auto;
     left: 0px;

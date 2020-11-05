@@ -47,37 +47,55 @@ export default function Contact() {
             Don’t fill this out: <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            usługa:
-            <br />
-            <input type="text" name="usluga" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Wyślij wiadomość</button>
-        </p>
+        <div className="row">
+          <div className="col-6">
+          <div className="form-group">
+            <label>
+              Your name:
+              </label>
+              <input type="text" name="name" onChange={handleChange} />
+           
+          </div>
+          <div className="form-group">
+            <label>
+              Your email:
+              </label>
+              <input type="email" name="email" onChange={handleChange} />
+            
+          </div>
+          <div className="form-group">
+            <label>
+              usługa:
+              </label>
+              <input type="text" name="usluga" onChange={handleChange} />
+            
+          </div>
+          <div className="desctop">
+          <div className="form-group">
+            <button type="submit">Wyślij wiadomość</button>
+          </div>
+          </div>
+          
+          </div>
+          <div className="col-6">
+          <div className="form-group">
+            <label>
+              Message:
+              </label>
+              <textarea name="message" onChange={handleChange} />
+            
+          </div>
+          <div className="mobile">
+          <div className="form-group">
+            <button type="submit">Wyślij wiadomość</button>
+          </div>
+          </div>
+         
+          </div>
+        </div>
+        
+        
+        
       </form>
   )
 }
