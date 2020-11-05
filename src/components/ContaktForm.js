@@ -49,21 +49,21 @@ export default function Contact() {
         </p>
         <div className="row">
           <div className="col-6">
-          <div className="form-group">
+          <div className="form-group form__border">
             <label>
               Your name:
               </label>
               <input type="text" name="name" onChange={handleChange} />
            
           </div>
-          <div className="form-group">
+          <div className="form-group form__border">
             <label>
               Your email:
               </label>
               <input type="email" name="email" onChange={handleChange} />
             
           </div>
-          <div className="form-group">
+          <div className="form-group form__border">
             <label>
               usługa:
               </label>
@@ -78,7 +78,7 @@ export default function Contact() {
           
           </div>
           <div className="col-6">
-          <div className="form-group">
+          <div className="form-group form__border">
             <label>
               Message:
               </label>
@@ -86,7 +86,7 @@ export default function Contact() {
             
           </div>
           <div className="mobile">
-          <div className="form-group">
+          <div className="form-group ">
             <button type="submit">Wyślij wiadomość</button>
           </div>
           </div>
