@@ -5,30 +5,49 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import Img from "gatsby-image"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 
+class MailChimpForm extends React.Component {
+    constructor() {
+      super()
+      this.state = { email: "", result: null }
+    }
+    _handleSubmit = async e => {
+      e.preventDefault()
+      const result = await addToMailchimp(this.state.email)
+      this.setState({result: result})
+    }
+    
+    handleChange = event => {
+      this.setState({ email: event.target.value })
+    }
 
-const Subscribe = ({data}) =>(
-    <section id="subscribe" className="main-background">
-        <div className="container">
-            <div className="row">
-                <div className="col-4 subscribe-img">
-                    <Img  fluid={data.dog.childImageSharp.fluid} />
-                </div>
-                <div className="col-8">
-                    <h3 className="main-text"><div>Bądź na bierząco,</div>zapisz się do newslettera!</h3>
-                    <form>
-                        <div className="form-group">
-                            <input type="email" placeholder="E-mail"/>
-                            <button type="submit" >Zapisz się!</button>
-                        </div>
-                        
-                    </form>
+    render() {
+       
+        
+      return(
+        <section id="subscribe" className="main-background">
+            <div className="container">
+                <div className="row">
+                    <div className="col-4 subscribe-img">
+                        <Img  fluid={this.props.data.dog.childImageSharp.fluid} />
+                    </div>
+                    <div className="col-8">
+                        <h3 className="main-text"><div>Bądź na bierząco,</div>zapisz się do newslettera!</h3>
+                        {this.state.result &&  (this.state.result.result === "error" ? <span className="alert">Już subskrybujesz nasz newsletter.</span> : <span className="alert">Dziękujemy, od dziś subskrybujesz nasz newsletter.</span>)}
+                        <form onSubmit={this._handleSubmit}>
+                            <div className="form-group">
+                                <input type="email" placeholder="E-mail" onChange={this.handleChange}/>
+                                <button type="submit" >Zapisz się!</button>
+                            </div>
+                            
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-)
-
+        </section>
+)}
+      }
 export default ()=>(
     <StaticQuery 
       query={
@@ -44,6 +63,6 @@ export default ()=>(
             }
           `
       }
-      render={(data)=> <Subscribe data={data}/>}
+      render={(data)=> <MailChimpForm data={data}/>}
     />
   )

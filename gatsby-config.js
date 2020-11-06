@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `AnimalVet `,
@@ -66,6 +70,12 @@ module.exports = {
           `/offline-plugin-app-shell-fallback/`,
         ],
       }
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: process.env.MAILCHIMP_ENDPOINT, 
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

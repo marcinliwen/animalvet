@@ -663,6 +663,13 @@ p{
 .d-flex{
   display: flex;
 }
+.alert {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 12px;
+  font-weight: 700;
+}
 .border-b{
   border-bottom: 1px solid #000;
 }
