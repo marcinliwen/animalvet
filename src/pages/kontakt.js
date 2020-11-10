@@ -81,7 +81,7 @@ const Kontakt = (props) => {
                 <ContaktForm />
               </div>
               <div className="col-4">
-                <Img fluid={props.data.imgContakt.childImageSharp.fluid} />
+                <Img fluid={props.data.imgContakt.childImageSharp.fluid} className="main-background"/>
               </div>
             </div>       
           </div>
@@ -93,7 +93,7 @@ export default Kontakt
 
 export const pageQuery = graphql`
 query {
-  imgContakt: file(relativePath: {eq: "contakt.png"}) {
+  imgContakt: file(relativePath: {eq: "kontakt-dog.png"}) {
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid
