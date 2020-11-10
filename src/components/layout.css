@@ -620,7 +620,7 @@ p, h1, h2, h3, h4, h5, h6{
   }
 }
 .container {
-  max-width: 1280px;
+  max-width: 1200px;
   width:100%;
   margin-left: auto;
   margin-right: auto;
@@ -846,7 +846,6 @@ section#uslugi {
 }
 .uslugi-cart.for-btn {
   border: none;
-  padding: 0;
   text-align: center;
 }
 .uslugi-header h2::first-line {
@@ -896,6 +895,7 @@ section#office {
 .office-img {
   margin-left: -15px;
   margin-right: -15px;
+  width: calc(100% + 30px);
 }
 
 
@@ -1045,10 +1045,10 @@ section#subscribe input {
   outline: none;
 }
 @media (min-width: 700px){
-  .col-4 {width: calc(100%/3);padding: 0 25px;}
-  .col-8 {width: calc(2*(100%/3));padding: 0 25px}
-  .col-6{width:50%;padding:0 25px}
-  .row{margin:0 -25px; }
+  .col-4 {width: calc(100%/3);padding: 0 30px;}
+  .col-8 {width: calc(2*(100%/3));padding: 0 30px}
+  .col-6{width:50%;padding:0 30px}
+  .row{margin:0 -30px; }
   .container{
     padding: 0;
   }
@@ -1066,22 +1066,16 @@ section#subscribe input {
     left: 0px;
     width: 75%;
   }
-  .clients-text{
-    padding: 0 50px;
-  }
-  .client-titles{
-    padding-right: 50px;
-  }
   #office .container {
     display: flex;
   }
 
   .office-container {
-      width: 60%;
+     
   }
 
   .office-img {
-      width: 40%;
+    
       margin: 0;
       display: flex;
       align-items: center;
@@ -1134,9 +1128,7 @@ section#subscribe input {
     padding-right: 32px;
   }
   .uslugi-cart {
-    width: calc(100%/3);
     border: none;
-    padding-right: 5%;
 }
 .uslugi-cart.for-btn{
   text-align: left;
