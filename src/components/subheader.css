@@ -32,7 +32,7 @@
     max-width: 250px;
 }
 
-.subheader .-content h2:after {content: "";height: 1px;width: 60%;background: #ff6290;display: block;margin-top: 8px;}
+.subheader .-content h2:after {content: "";height: 3px;width: 60%;background: #ff6290;display: block;margin-top: 8px;}
 
 @media (min-width: 770px){
     .subheader .-content h2 {

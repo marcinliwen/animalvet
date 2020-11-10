@@ -893,8 +893,7 @@ section#office {
 }
 
 .office-img {
-  margin-left: -15px;
-  margin-right: -15px;
+
   width: calc(100% + 30px);
 }
 
@@ -1044,6 +1043,9 @@ section#subscribe input {
 .form-group input:focus{
   outline: none;
 }
+.gatsby-image-wrapper img {
+  opacity: 1 !important;
+}
 @media (min-width: 700px){
   .col-4 {width: calc(100%/3);padding: 0 30px;}
   .col-8 {width: calc(2*(100%/3));padding: 0 30px}
@@ -1114,7 +1116,7 @@ section#subscribe input {
   }
 }
 @media(max-width:699px){
-  #clients .gatsby-image-wrapper {
+  .gatsby-image-wrapper {
     margin-left: -15px;
     margin-right: -15px;
 }

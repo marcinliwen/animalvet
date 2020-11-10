@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -79,13 +80,26 @@ const Kontakt = (props) => {
               <div className="col-8">
                 <ContaktForm />
               </div>
-              <div className="col-4"></div>
+              <div className="col-4">
+                <Img fluid={props.data.imgContakt.childImageSharp.fluid} />
+              </div>
             </div>       
           </div>
         </section>
-      <Subscribe />
     </Layout>
   )}
   
-  export default Kontakt
+export default Kontakt
+
+export const pageQuery = graphql`
+query {
+  imgContakt: file(relativePath: {eq: "contakt.png"}) {
+    childImageSharp {
+      fluid{
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`
   

@@ -23,5 +23,10 @@ section#kontakt {
     margin-bottom: 15px;
 }
 section#kontakt-form {
-    padding: 76px 0;
+    padding: 76px 0 0;
+}
+@media(min-width: 700px){
+    section#kontakt-form {
+        padding: 76px 0;
+    }
 }
