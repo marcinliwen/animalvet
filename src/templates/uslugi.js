@@ -42,29 +42,21 @@ const Uslugi = (props) => {
 
 export default Uslugi
 
+
 export const pageQuery = graphql`
-query{
-      markdownRemark{
-        frontmatter {
-          title,
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        slug
+        title,
           services{
             image,
             title,
             text
           },
-        },
-        html
-      }
-}
-`
-/*
-export const productPageQuery = graphql`
-  query ProductPage ($id: String!){
-    markdownRemark (id: { eq: $id }) {
-      frontmatter {
-        title
-      }
+      },
+      html
     }
   }
 `
-*/

@@ -19,7 +19,9 @@ return(
       <div className="container">
         <div className="uslugi-header d-block">
             <h2>{props.title}</h2>
-            <div className="border-b col-8" dangerouslySetInnerHTML={{ __html: props.html }} />
+            <div className="row">
+              <div className="border-b col-8" dangerouslySetInnerHTML={{ __html: props.html }} />
+            </div>
         </div>
        <Services items={props.services} />
         {/*<div className="uslugi-content">
@@ -80,17 +82,19 @@ return(
 }
 
 const Services = ({items}) =>{
+
+  
   return(
-    <div className="uslugi-content">
+    <div className="uslugi-content row">
     {items.map(item=>(
-      <div className="uslugi-cart">
+      <div className="uslugi-cart col-4">
       <div className="uslugi-cart-title">
         <div className="uslugi-icon"><img src={item.image} alt={item.title}/></div>
-        <h3>{item.title}</h3>
+        <h3><Link to={"/uslugi/" + item.title}>{item.title}</Link></h3>
       </div>
       <div className="desc">
         <p>{item.text}</p>
-        <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
+        <Link className="uslugi-more" to={"/uslugi/" + item.title}><span>Dowiedz się więcej </span><ArrowRight /></Link>
       </div>
     </div>
     ))}

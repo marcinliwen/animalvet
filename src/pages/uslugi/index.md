@@ -1,5 +1,7 @@
 ---
+templateKey: "uslugi"
 title: "Usługi"
+slug: "/uslugi"
 services:
     - image: "/img/surgery-tools.svg"
       title: "chirurgia"
