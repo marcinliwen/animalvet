@@ -50,6 +50,7 @@
     width: calc(100% - 76px);
     padding-top: 46px;
     background: #8cd4ff;
+    align-items: center;
   }
   .nav_back{
     position: fixed;
@@ -83,10 +84,10 @@
   nav .navbar-item {
     font-size: 18px;
     line-height: 28px;
-    padding: 16px;
-    margin: 0;
     text-align: center;
     color: #000;
+    margin: 16px;
+    width: max-content;
   }
   .navbar-burger.burger {
     position: absolute;
@@ -173,6 +174,9 @@
 }
 .logo >div:nth-child(2){
   font-weight: 900;
+}
+.navbar-item.active {
+  border-bottom: 3px solid #FF628B;
 }
   @media(min-width:770px){
       .header .container{

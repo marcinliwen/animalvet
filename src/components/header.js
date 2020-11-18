@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
+import { globalHistory as history } from '@reach/router'
+
 
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
@@ -19,6 +21,10 @@ const Header = (props) => {
     else{document.body.classList.remove('menu-open')}
   });
 
+  const { location, navigate } = history
+ 
+  const currentLocation = location.pathname.split('/');
+  console.log(currentLocation);
   return(
   <header>    
      <div
@@ -56,13 +62,13 @@ const Header = (props) => {
           //onClick={toggleHamburger}
         >
       
-        <Link className="navbar-item" 
+        <Link className={`navbar-item ${currentLocation.includes("uslugi") ? "active" :""}`} 
           activeClass="active"
           to="/uslugi"
         >
           Usługi
         </Link>
-        <Link className="navbar-item" 
+        <Link className={`navbar-item ${currentLocation.includes("zespol") ? "active" :""}`} 
           activeClass="active"
           to="/zespol"
           //spy={true}
@@ -73,7 +79,7 @@ const Header = (props) => {
         >
           Zespół
         </Link>
-        <Link className="navbar-item" 
+        <Link className={`navbar-item ${currentLocation.includes("pupils") ? "active" :""}`}  
           activeClass="active"
           to="/pupils"
           //spy={true}
@@ -84,7 +90,7 @@ const Header = (props) => {
         >
           Nasi pacjenci
         </Link>
-        <Link className="navbar-item" 
+        <Link className={`navbar-item ${currentLocation.includes("blog") ? "active" :""}`} 
           activeClass="active"
           to="/blog"
           //spy={true}
@@ -95,7 +101,7 @@ const Header = (props) => {
         >
           Blog
         </Link>
-        <Link className="navbar-item" 
+        <Link className={`navbar-item ${currentLocation.includes("kontakt") ? "active" :""}`} 
           activeClass="active"
           to="/kontakt"
           onClick={toggleHamburger}
