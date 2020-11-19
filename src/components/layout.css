@@ -1051,6 +1051,7 @@ section#subscribe input {
   .col-4 {width: calc(100%/3);padding-left:30px; padding-right:30px}
   .col-8 {width: calc(2*(100%/3));padding-left:30px; padding-right:30px}
   .col-6{width:50%;padding-left:30px; padding-right:30px}
+  .col-12{width:100%;padding-left:30px;padding-right:30px}
   .row{margin:0 -30px; }
   .container{
     padding: 0;
@@ -1062,7 +1063,7 @@ section#subscribe input {
     display: block;
   }
   .form-group textarea{
-    height: calc(3*68px + 25px);
+    height: calc(3*70px + 92px);
   }
   .clients-item:after {
     right: auto;

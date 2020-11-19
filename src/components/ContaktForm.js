@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 
+import phone from "../images/phone.svg"
 
 function encode(data) {
   return Object.keys(data)
@@ -48,26 +49,30 @@ export default function Contact() {
           </label>
         </p>
         <div className="row">
+          <div className="col-12">
+            <h3 style={{marginBottom:"0px"}}>Umów się na wizytę</h3>
+            <p>Zadzwoń <strong>+48 506 109 445</strong> lub napisz do nas jak możemy pomóc Twojemu pupilowi.</p>            
+          </div>
           <div className="col-6">
           <div className="form-group form__border">
             <label>
-              Your name:
+              Imię :
               </label>
               <input type="text" name="name" onChange={handleChange} />
            
           </div>
           <div className="form-group form__border">
             <label>
-              Your email:
+              E-mail:
               </label>
               <input type="email" name="email" onChange={handleChange} />
             
           </div>
           <div className="form-group form__border">
             <label>
-              usługa:
+              Telefon:
               </label>
-              <input type="text" name="usluga" onChange={handleChange} />
+              <input type="text" name="telefon" onChange={handleChange} />
             
           </div>
           <div className="desctop">
@@ -80,7 +85,7 @@ export default function Contact() {
           <div className="col-6">
           <div className="form-group form__border">
             <label>
-              Message:
+              Wiadomość:
               </label>
               <textarea name="message" onChange={handleChange} />
             
