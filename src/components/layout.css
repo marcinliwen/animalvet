@@ -1047,6 +1047,66 @@ section#subscribe input {
 .form-group input:focus{
   outline: none;
 }
+.services-nav h4 {
+  background: #FAFAFA;
+  padding: 30px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000;
+}
+
+ul.services-nav-list {
+  list-style: none;
+  margin: 0;
+}
+
+ul.services-nav-list li {
+  
+  margin: 0;
+  border-bottom: 1px solid #C4c4c4;
+}
+ul.services-nav-list li a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 24px 30px;
+  font-size: 14px;
+  color: #000;
+  line-height: 18px;
+}
+
+ul.services-nav-list li img {
+  margin: 0;
+  transform: rotate(90deg);
+}
+.subservices-items {
+  background: #F0FAFE;
+  margin-top: 70px;
+  padding: 0 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+}
+.subservices-desc {
+  overflow: hidden;
+  transition: max-height 0.4s ease;}
+
+.subservices-title {
+  padding: 27px 0 26px;
+}
+.subservices-item {
+  border-bottom: 1px solid #bcbcbc;
+  cursor: pointer;
+}
+
+.subservices-title h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.subservices-item:last-child  {
+  border: none;
+}
 @media (min-width: 700px){
   .col-4 {width: calc(100%/3);padding-left:30px; padding-right:30px}
   .col-8 {width: calc(2*(100%/3));padding-left:30px; padding-right:30px}
