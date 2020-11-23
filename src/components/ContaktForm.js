@@ -3,6 +3,7 @@ import { navigate } from 'gatsby-link'
 
 import phone from "../images/phone-call.svg"
 import whatsapp from "../images/whatsapp.svg"
+import messenger from "../images/messenger.svg"
 
 function encode(data) {
   return Object.keys(data)
@@ -55,9 +56,9 @@ export default function Contact() {
         <div className="row">
           <div className="col-12 kontakt-header">
             <h3 style={{marginBottom:"0px"}}>Umów się na wizytę</h3>
-            <a className="kontakt-link" href={`http://wa.me/${phone_number}/?text=${wiadomosc}`} target="_blank"><img src={whatsapp} width="18px" height="18px"/> <p>Whats up!</p></a>
             <a className="kontakt-link" href={`tel:${phone_number}`} target="_blank"><img src={phone} width="18px" height="18px"/> <p>+48 506 109 445</p></a>
-
+            <a className="kontakt-link" href={`http://wa.me/${phone_number}/?text=${wiadomosc}`} target="_blank"><img src={whatsapp} width="18px" height="18px"/> <p>Whats up!</p></a>
+            <a className="kontakt-link" href="http://m.me/1331193130342453" target="_blank"><img src={messenger} width="18px" height="18px"/> <p>Messenger</p></a>
             <p>lub napisz do nas jak możemy pomóc Twojemu pupilowi.</p>            
           </div>
           <div className="col-6">
