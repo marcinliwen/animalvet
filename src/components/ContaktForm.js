@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 
-import phone from "../images/phone.svg"
+import phone from "../images/phone-call.svg"
 import whatsapp from "../images/whatsapp.svg"
 
 function encode(data) {

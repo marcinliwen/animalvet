@@ -36,8 +36,19 @@ section#kontakt-form {
     vertical-align: middle;
 }
 
-.kontakt-link img {
-    margin-right: 15px;
+.kontakt-header>p {
+    margin: 25px 0 8px 0;
+}
+@media(max-width: 699px){
+    .kontakt-link {
+        display: block;
+        padding: 12px 30px;
+        background: #F0FAFE;
+        margin-bottom: 8px;
+        box-shadow: 1px 1px 3px #00000057;
+        text-align: center;
+        border-radius: 4px;
+    }
 }
 @media(min-width: 700px){
     section#kontakt-form {
