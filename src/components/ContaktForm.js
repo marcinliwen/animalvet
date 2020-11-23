@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 
 import phone from "../images/phone.svg"
+import whatsapp from "../images/whatsapp.svg"
 
 function encode(data) {
   return Object.keys(data)
@@ -31,6 +32,9 @@ export default function Contact() {
       .catch((error) => alert(error))
   }
 
+  const phone_number = "48506109445"
+  const wiadomosc = "Dzień dobry, chciałbym umówić się na wizytę";
+
   return (
   
       <form
@@ -49,9 +53,12 @@ export default function Contact() {
           </label>
         </p>
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 kontakt-header">
             <h3 style={{marginBottom:"0px"}}>Umów się na wizytę</h3>
-            <p>Zadzwoń <strong>+48 506 109 445</strong> lub napisz do nas jak możemy pomóc Twojemu pupilowi.</p>            
+            <a className="kontakt-link" href={`http://wa.me/${phone_number}/?text=${wiadomosc}`} target="_blank"><img src={whatsapp} width="18px" height="18px"/> <p>Whats up!</p></a>
+            <a className="kontakt-link" href={`tel:${phone_number}`} target="_blank"><img src={phone} width="18px" height="18px"/> <p>+48 506 109 445</p></a>
+
+            <p>lub napisz do nas jak możemy pomóc Twojemu pupilowi.</p>            
           </div>
           <div className="col-6">
           <div className="form-group form__border">

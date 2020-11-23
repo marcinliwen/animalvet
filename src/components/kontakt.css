@@ -24,9 +24,33 @@ section#kontakt {
 }
 section#kontakt-form {
     padding: 76px 0 0;
+
+}
+.kontakt-link {
+    display: block;
+    padding: 12px 0;
+}
+
+.kontakt-link * {
+    display: inline;
+    vertical-align: middle;
+}
+
+.kontakt-link img {
+    margin-right: 15px;
 }
 @media(min-width: 700px){
     section#kontakt-form {
         padding: 76px 0;
+    }
+    .kontakt-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .kontakt-header a {
+        margin-left: 25px;
+        padding: 0;
+        line-height: 46px;
     }
 }
