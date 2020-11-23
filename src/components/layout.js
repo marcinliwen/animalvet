@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "../components/Footer"
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -29,6 +30,14 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
+        <MessengerCustomerChat
+    pageId="1480527812217145"
+    appId="296614704926289"
+    //htmlRef="<REF_STRING>"
+    theme_color="#ff628b"
+    logged_in_greeting="Dzień dobry, w czym możemy Ci pomóc?"
+
+  />
         <Footer />
       </div>
     </>
