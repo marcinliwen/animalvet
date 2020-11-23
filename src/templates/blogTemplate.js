@@ -8,12 +8,10 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Subscribe from "../components/Subscribe"
 import Subheader from "../components/Subheader"
 import ContaktForm from "../components/ContaktForm"
 import UslugiNav from "../components/UslugiNav"
 import Subservices from "../components/Subservices"
-
 
 export default function Template(
   props, // this prop will be injected by the GraphQL query below.

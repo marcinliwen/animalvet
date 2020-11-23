@@ -12,7 +12,6 @@ const Subheader = (props) =>(
       <div className="container">
         <div className="-content">
             <h2>{props.title}</h2>
-            <Button color="#fff" background="#ff6290">Umów wizytę</Button>
         </div>
         <div className="-img">
        <Img fluid={props.data.dogdog.childImageSharp.fluid} />

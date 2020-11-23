@@ -16,7 +16,7 @@ const Accordion = (prop) => {
     }
     return(
         <div className="subservices-item">
-            <div className={`subservices-title accordion ${setActive}`} onClick={toggleAccordion}><h4>{prop.title}</h4></div>
+            <div className={`subservices-title accordion ${setActive}`} onClick={prop.setClickHandler}><h4>{prop.title}</h4></div>
             <div className="subservices-desc" 
                 ref={content}
                 style={{ maxHeight: `${setHeight}` }}
