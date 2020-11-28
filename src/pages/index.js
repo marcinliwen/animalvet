@@ -134,7 +134,7 @@ const IndexPage = props => (
           <h2>Zaufali nam</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <Button color="#fff" background="#ff6290">Nasi pacjenci</Button>
+          <Button color="#fff" background="#ff6290"><Link activeClass="active" to="pacjenci">Nasi pacjenci</Link></Button>
         </div>
         <div className="col-8 clients-item">
           <div className="row">

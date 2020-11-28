@@ -81,7 +81,7 @@ const Header = (props) => {
         </Link>
         <Link className={`navbar-item ${currentLocation.includes("pupils") ? "active" :""}`}  
           activeClass="active"
-          to="/pupils"
+          to="/pacjenci"
           //spy={true}
           //smooth={true}
           //offset={-65}

@@ -991,7 +991,8 @@ section#office {
   padding: 76px 0;
 }
 .clients-item{
-  padding-top: 82px;
+  display: flex;
+  align-items: center;
 }
 .clients-item {
   position: relative;
