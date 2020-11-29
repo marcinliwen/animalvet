@@ -24,7 +24,7 @@ export default function Template(
   const {
     breadcrumb: { crumbs },
   } = props.pageContext;
-console.log(props.location);
+
   const customCrumbLabel = props.location.pathname.replace('/', ' ');
   const currentCrumbName = customCrumbLabel.slice(customCrumbLabel.lastIndexOf('/') + 1);
   return (

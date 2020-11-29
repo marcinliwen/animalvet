@@ -23,8 +23,13 @@ import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
 import time from "../images/time.svg"
 
+import "../components/slider.css"
 
-const IndexPage = props => (
+const IndexPage = props => {
+  
+  const pacjenci = props.data.pacjenci.frontmatter.list;
+  
+  return(
   <Layout>
     <SEO title="Home" />
     <section id="welcome">
@@ -136,16 +141,24 @@ const IndexPage = props => (
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <Button color="#fff" background="#ff6290"><Link activeClass="active" to="pacjenci">Nasi pacjenci</Link></Button>
         </div>
-        <div className="col-8 clients-item">
-          <div className="row">
-            <div className="col-6 clients-text">
-              <p><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</q></p>
-              <p><b>Właścicielka Bengali</b></p>
+        <div className="col-8 slider">
+          <div className="clients-list slides">
+          {pacjenci.map((item, index)=>(
+              <div className="clients-item">
+              <div className="clients-text">
+              <p><b>{item.title}</b></p>
+              <p><q>{item.description}</q></p>
+              
             </div>
-            <div className="col-6">
-            <Img fluid={props.data.bengal.childImageSharp.fluid} />
+            <div className="clients-img">
+            <Img fluid={item.featuredImage.childImageSharp.fluid} />
             </div>
+              </div>
+
+            ))}
           </div>
+            
+            
           
         </div>
         </div>
@@ -154,7 +167,7 @@ const IndexPage = props => (
     </section>
     <Subscribe  image={props.data.dog.childImageSharp.fluid}/>
   </Layout>
-)
+)}
 
 export default IndexPage
 
@@ -186,6 +199,24 @@ query {
         fluid{
         ...GatsbyImageSharpFluid
         }
+    }
+  }
+  pacjenci : markdownRemark(frontmatter: {templateKey: {eq: "pacjenci"}}) {
+    frontmatter {
+      list {
+        description
+        title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 360) {
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+            }
+          }
+        }
+      }
     }
   }
 }

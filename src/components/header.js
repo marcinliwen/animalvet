@@ -24,7 +24,7 @@ const Header = (props) => {
   const { location, navigate } = history
  
   const currentLocation = location.pathname.split('/');
-  console.log(currentLocation);
+
   return(
   <header>    
      <div

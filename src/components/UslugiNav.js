@@ -9,7 +9,6 @@ const UslugiNav = (props) =>{
     const { location, navigate } = history
  
     const currentLocation = location.pathname.split('/');
-    console.log(currentLocation);
 
     return(
         <ul className="services-nav-list">
