@@ -23,6 +23,7 @@ const Pacjenci = (props) => {
   
     const customCrumbLabel = props.location.pathname.replace('/', ' ');
   
+    console.log("propsy" + props.data.pacjenci.tytul);
     return(
       <Layout>
       <SEO title="Pacjenci" />
@@ -34,6 +35,28 @@ const Pacjenci = (props) => {
         crumbLabel={customCrumbLabel}
       />
       </div>
+      <section className="section" id="pupils">
+        <div className="container">
+          <h2>{props.data.pacjenci.frontmatter.tytul}</h2>
+          <div className="row">
+            <div className="col-12">
+              {props.data.pacjenci.frontmatter.list.map((item, index)=>(
+                <div className="row pupils-item" key={index}>
+                  <div className="col-8 d-flex order-1-mb">
+                    <div className="__desc d-flex-column-center">
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                  <div className="col-4" >
+                    <Img fluid={item.featuredImage.childImageSharp.fluid} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="kontakt-form" className="background__secondadry">
           <div className="container">
             <div className="row">
@@ -59,6 +82,27 @@ const Pacjenci = (props) => {
             ...GatsbyImageSharpFluid
           }
         }
+      },
+    pacjenci : markdownRemark(frontmatter: {templateKey: {eq: "pacjenci"}}) {
+      frontmatter {
+        list {
+          description
+          title
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 360) {
+                aspectRatio
+                src
+                srcSet
+                srcWebp
+              }
+            }
+          }
+        }
+      title,
+      tytul
       }
+    }
+  
   }
   `
