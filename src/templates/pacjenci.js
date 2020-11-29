@@ -34,6 +34,7 @@ const Pacjenci = (props) => {
         crumbLabel={customCrumbLabel}
       />
       </div>
+      {/*
       <section className="section" id="pupils">
         <div className="container">
           <h2>{props.data.pacjenci.frontmatter.tytul}</h2>
@@ -56,6 +57,7 @@ const Pacjenci = (props) => {
           </div>
         </div>
       </section>
+              */}
       <section id="kontakt-form" className="background__secondadry">
           <div className="container">
             <div className="row">
