@@ -23,7 +23,6 @@ const Pacjenci = (props) => {
   
     const customCrumbLabel = props.location.pathname.replace('/', ' ');
   
-    console.log("propsy" + props.data.pacjenci.tytul);
     return(
       <Layout>
       <SEO title="Pacjenci" />
