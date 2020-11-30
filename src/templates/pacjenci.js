@@ -78,7 +78,7 @@ const Pacjenci = (props) => {
     imgContakt: file(relativePath: {eq: "kontakt-dog.png"}) {
         childImageSharp {
           fluid{
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       },
@@ -90,10 +90,7 @@ const Pacjenci = (props) => {
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 360) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }

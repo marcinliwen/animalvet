@@ -81,7 +81,11 @@ const Kontakt = (props) => {
                 <ContaktForm />
               </div>
               <div className="col-4">
-                <Img fluid={props.data.imgContakt.childImageSharp.fluid} className="main-background"/>
+                <Img 
+                  fluid={props.data.imgContakt.childImageSharp.fluid} 
+                  placeholderStyle={{"backgroundColor": "#8cd4ff" }}
+                  className="main-background"
+                  />
               </div>
             </div>       
           </div>
@@ -96,7 +100,7 @@ query {
   imgContakt: file(relativePath: {eq: "kontakt-dog.png"}) {
     childImageSharp {
       fluid{
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   }

@@ -173,31 +173,31 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query {
-  imgOne : file(relativePath: {eq: "cat_03.png"}) {
+  imgOne : file(relativePath: {eq: "doghome.png"}) {
     childImageSharp {
       fluid{
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   },
   imgOffice : file(relativePath: {eq: "office.jpg"}){
     childImageSharp {
       fluid{
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   },
   bengal : file(relativePath: {eq: "bengal.jpg"}){
     childImageSharp {
       fluid{
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
   },
   dog : file(relativePath: {eq: "dog.png"}) {
     childImageSharp {
         fluid{
-        ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
     }
   }
@@ -209,10 +209,7 @@ query {
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 360) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

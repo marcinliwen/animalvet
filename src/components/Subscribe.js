@@ -56,7 +56,7 @@ export default ()=>(
             dog : file(relativePath: {eq: "dog.png"}) {
                 childImageSharp {
                     fluid{
-                    ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
               },

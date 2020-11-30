@@ -94,7 +94,7 @@ export const pageQuery = graphql`
     imgContakt: file(relativePath: {eq: "kontakt-dog.png"}) {
       childImageSharp {
         fluid{
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

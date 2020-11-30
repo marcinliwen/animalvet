@@ -29,7 +29,7 @@ export default function MySubheader (props) {return(
             dogdog : file(relativePath: {eq: "dog_care.png"}) {
                 childImageSharp {
                   fluid{
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
             },
