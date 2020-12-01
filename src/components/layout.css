@@ -998,13 +998,24 @@ section#office {
 .clients-item{
   display: flex;
   align-items: center;
+  flex-direction: column-reverse;
+
 }
 .clients-item {
   position: relative;
 }
 
 .clients-item:after {content: "";position: absolute;top: 0;left: -15px;bottom: 0;background: #d5f1ff;z-index: -1;right: -15px;}
-
+.clients-text, .clients-img{
+  width: 100%;
+}
+.clients-text{
+  padding: 30px 30px 0;
+  text-align: left;
+}
+.clients-img {
+  padding: 0 15px;
+}
 .form-group button {
   margin: 0;
   flex: 1;
@@ -1241,6 +1252,21 @@ ul.services-nav-list .active {
   .counter-element{
     flex:0;
     padding-right: 0;
+  }
+  .slider {
+    width: calc(2*(100%/3));
+  }
+
+  .clients-item {
+      flex-direction: row;
+  }
+
+  .clients-text {
+      padding: 0 30px;
+  }
+
+  .clients-img {
+      padding: 60px 15px;
   }
   .counter-element:not(:last-of-type){
     padding-right: 32px;

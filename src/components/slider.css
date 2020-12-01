@@ -1,31 +1,29 @@
   .slider {
     text-align: center;
     overflow: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px)
   }
   
   .slides {
-    display: flex;
-    
+    display: flex; 
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    
-    
-    
+    scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    
     /*
     scroll-snap-points-x: repeat(300px);
     scroll-snap-type: mandatory;
     */
   }
   .slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 3px;
+    height: 2px;
   }
   .slides::-webkit-scrollbar-thumb {
     background: black;
-    border-radius: 10px;
+    border-radius: 5%;
   }
   .slides::-webkit-scrollbar-track {
     background: transparent;
@@ -35,7 +33,6 @@
     flex-shrink: 0;
     width: 100%;
     transform-origin: center center;
-    transform: scale(1);
     transition: transform 0.5s;
     position: relative;
     
@@ -86,16 +83,11 @@
   .slider > a:focus {
     background: #000;
   }
-  
-  
+  @media (min-width: 770px){
+    .slider {
+      width: calc(2*(100%/3));
+    }
 
-  .clients-text, .clients-img{
-    width: 50%;
   }
-  .clients-text{
-      padding: 0 30px;
-      text-align: left;
-  }
-  .clients-img {
-    padding: 105px 30px;
-}
+  
+ 

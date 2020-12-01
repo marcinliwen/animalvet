@@ -151,7 +151,10 @@ const IndexPage = props => {
               
             </div>
             <div className="clients-img">
-            <Img fluid={item.featuredImage.childImageSharp.fluid} />
+            <Img 
+              fluid={item.featuredImage.childImageSharp.fluid} 
+              placeholderStyle={{"backgroundColor": "#d5f1ff" }}
+            />
             </div>
               </div>
 
