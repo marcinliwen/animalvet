@@ -83,6 +83,28 @@
   .slider > a:focus {
     background: #000;
   }
+  .slide-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.slide-nav a {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 48px;
+  height: 48px;
+}
+.slide-counter {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 14px;
+  display: flex;
+  align-items: center;
+}
+
   @media (min-width: 770px){
     .slider {
       width: calc(2*(100%/3));
