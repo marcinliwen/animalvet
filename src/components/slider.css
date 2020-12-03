@@ -3,7 +3,8 @@
     overflow: hidden;
     margin-left: -15px;
     margin-right: -15px;
-    width: calc(100% + 30px)
+    width: calc(100% + 30px);
+    position: relative;
   }
   
   .slides {
@@ -104,10 +105,40 @@
   display: flex;
   align-items: center;
 }
+.slider-nav {
+  top: auto;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+  bottom: 2px;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  position: absolute;
+  z-index: 6;
+}
 
+
+.slider-nav button {
+  margin: 0 8px;
+  padding: 0;
+  height: 25px;
+  background: none;
+}
   @media (min-width: 770px){
     .slider {
       width: calc(2*(100%/3));
+      position: relative;
+    }
+    .slider-nav {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      position: absolute;
+      z-index: 6;
+      bottom: 30px;
+      left: 60px;
+      width: auto;
     }
 
   }

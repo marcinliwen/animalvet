@@ -996,7 +996,7 @@ section#office {
   padding: 76px 0;
 }
 .clients-item{
-  display: flex;
+  display: flex!important;
   align-items: center;
   flex-direction: column-reverse;
 
@@ -1266,7 +1266,7 @@ ul.services-nav-list .active {
   }
 
   .clients-img {
-      padding: 60px 15px;
+    padding: 60px 0 60px 15px;
   }
   .counter-element:not(:last-of-type){
     padding-right: 32px;
@@ -1372,6 +1372,9 @@ ul.services-nav-list .active {
   margin: 0;
 }
 
+}
+button:focus{
+  outline: none
 }
 @media(min-width: 900px){
   section#office {

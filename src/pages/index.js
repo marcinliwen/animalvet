@@ -13,6 +13,7 @@ import ArrowRight from "../components/Icons/ArrowR"
 import Button from "../components/Button"
 import Officecounter from "../components/Officecounter"
 import Subscribe from "../components/Subscribe"
+import Pacjencicarousel from "../components/Pacjencicarousel"
 
 import surgery from "../images/surgery-tools.svg"
 import control from "../images/control.svg"
@@ -142,7 +143,8 @@ const IndexPage = props => {
           <Button color="#fff" background="#ff6290"><Link activeClass="active" to="pacjenci">Nasi pacjenci</Link></Button>
         </div>
         <div className="col-8 slider">
-          <div className="clients-list slides">
+          <Pacjencicarousel pacjenci={pacjenci} />
+         {/* <div className="clients-list slides">
           {pacjenci.map((item, index)=>(
             <div className="clients-item" id={`item_${index}`}>
               <div className="slide-nav">
@@ -177,7 +179,7 @@ const IndexPage = props => {
 
             ))}
           </div>
-            
+                */}
             
           
         </div>
