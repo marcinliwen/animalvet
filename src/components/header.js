@@ -70,14 +70,14 @@ const Header = (props) => {
         </Link>
         <Link className={`navbar-item ${currentLocation.includes("zespol") ? "active" :""}`} 
           activeClass="active"
-          to="/zespol"
+          to="/onas"
           //spy={true}
           //smooth={true}
           //offset={-65}
           //duration={1000}
           onClick={toggleHamburger}
         >
-          Zespół
+          O nas
         </Link>
         <Link className={`navbar-item ${currentLocation.includes("pupils") ? "active" :""}`}  
           activeClass="active"

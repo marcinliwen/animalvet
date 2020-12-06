@@ -13,6 +13,7 @@
     scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
     /*
     scroll-snap-points-x: repeat(300px);
     scroll-snap-type: mandatory;
@@ -37,13 +38,17 @@
     transition: transform 0.5s;
     position: relative;
     
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     font-size: 100px;
   }
   .slides > div:target {
   /*   transform: scale(0.8); */
+  }
+  .slides .gatsby-image-wrapper{
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .author-info {
     color: white;
