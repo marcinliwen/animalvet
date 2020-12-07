@@ -68,7 +68,7 @@ const Header = (props) => {
         >
           Usługi
         </Link>
-        <Link className={`navbar-item ${currentLocation.includes("zespol") ? "active" :""}`} 
+        <Link className={`navbar-item ${currentLocation.includes("onas") ? "active" :""}`} 
           activeClass="active"
           to="/onas"
           //spy={true}
@@ -79,7 +79,7 @@ const Header = (props) => {
         >
           O nas
         </Link>
-        <Link className={`navbar-item ${currentLocation.includes("pupils") ? "active" :""}`}  
+        <Link className={`navbar-item ${currentLocation.includes("pacjenci") ? "active" :""}`}  
           activeClass="active"
           to="/pacjenci"
           //spy={true}
@@ -90,7 +90,7 @@ const Header = (props) => {
         >
           Nasi pacjenci
         </Link>
-        <Link className={`navbar-item ${currentLocation.includes("blog") ? "active" :""}`} 
+        {/*<Link className={`navbar-item ${currentLocation.includes("blog") ? "active" :""}`} 
           activeClass="active"
           to="/blog"
           //spy={true}
@@ -100,7 +100,7 @@ const Header = (props) => {
           onClick={toggleHamburger}
         >
           Blog
-        </Link>
+    </Link>*/}
         <Link className={`navbar-item ${currentLocation.includes("kontakt") ? "active" :""}`} 
           activeClass="active"
           to="/kontakt"

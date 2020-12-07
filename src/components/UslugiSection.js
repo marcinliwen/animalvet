@@ -15,6 +15,9 @@ import bandage from "../images/bandage.svg"
 const UslugiSection = (props) =>{
   
 return(
+  <>{props.isHomepage ?
+    <Services props={props} />
+    :
     <section id="uslugi" className="">
       <div className="container">
         <div className="uslugi-header d-block">
@@ -23,70 +26,20 @@ return(
               <div className="border-b col-8" dangerouslySetInnerHTML={{ __html: props.html }} />
             </div>
         </div>
-       <Services items={props.services} />
-        {/*<div className="uslugi-content">
-          <div className="uslugi-cart">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={control} alt="Badania kontrolne"/></div>
-              <h3>Badania kontrolne</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy badanie przed wyjazdem z kraju, chipowanie oraz wystawiamy paszporty.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={rtg} alt="RTG"/></div>
-              <h3>Rtg</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy zdjęcia RTG.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={profilactic} alt="profilaktyka"/></div>
-              <h3>Profilaktyka</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy badania krwi, moczu oraz wysyłamy próbki tkanek w przypadku badań histologicznych i cytologicznych.Prowadzimy diagnostykę alergii, chorób zakaźnych i genetycznych.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={vaccine} alt="Szczepienie"/></div>
-              <h3>Szczepienie</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy szczepienia psów, kotów oraz królików. Zarówno te wstępne jak i coroczne.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={bandage} alt="Ortopedia"/></div>
-              <h3>Ortopedia</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy osteosyntezę, leczenie zerwanych więzadeł oraz wad kostnych wrodzonych i nabytych.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-</div>*/}
+       <Services props={props}  />
       </div>
     </section>
+  }
+    </>
 )
 }
 
-const Services = ({items}) =>{
+const Services = ({props}) =>{
 
   
   return(
     <div className="uslugi-content row">
-    {items.map(item=>(
+    {props.services.map(item=>(
       <div className="uslugi-cart col-4">
       <div className="uslugi-cart-title">
         <div className="uslugi-icon"><img src={item.image} alt={item.title}/></div>
@@ -98,6 +51,12 @@ const Services = ({items}) =>{
       </div>
     </div>
     ))}
+    {props.isHomepage? 
+    <div className="uslugi-cart for-btn col-4">
+    <Link to="/uslugi" >
+      <Button color="#fff" background="#ff6290">Poznaj nasze usługi </Button>
+    </Link>
+    </div>:""}
   </div>
   )
 }

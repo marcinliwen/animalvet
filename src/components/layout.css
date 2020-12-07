@@ -1005,7 +1005,7 @@ section#office {
   width: 25px;
 }
 #clients {
-  padding: 76px 0;
+  padding: 76px 0 0;
 }
 .clients-item{
   display: flex!important;
@@ -1022,7 +1022,7 @@ section#office {
   width: 100%;
 }
 .clients-text{
-  padding: 30px 30px 0;
+  padding: 60px 30px 30px;
   text-align: left;
 }
 .clients-img {
@@ -1209,6 +1209,9 @@ section#spec {
   background: #F0FAFE;
 }
 @media (min-width: 700px){
+  #clients {
+    padding: 76px 0;
+  }
   .person-desc{
     bottom:-100%;
     transition-duration: 0.4s;

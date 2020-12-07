@@ -111,16 +111,16 @@
   align-items: center;
 }
 .slider-nav {
-  top: auto;
-  width: 100%;
-  left: 0;
-  justify-content: center;
-  bottom: 2px;
-  display: flex;
-  align-items: center;
-  margin-top: 0;
-  position: absolute;
-  z-index: 6;
+  top: 500px;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    bottom: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    position: absolute;
+    z-index: 6;
 }
 
 
@@ -144,6 +144,7 @@
       bottom: 30px;
       left: 60px;
       width: auto;
+      top: auto;
     }
 
   }

@@ -14,6 +14,7 @@ import Button from "../components/Button"
 import Officecounter from "../components/Officecounter"
 import Subscribe from "../components/Subscribe"
 import Pacjencicarousel from "../components/Pacjencicarousel"
+import UslugiSection from "../components/UslugiSection"
 
 import surgery from "../images/surgery-tools.svg"
 import control from "../images/control.svg"
@@ -30,6 +31,9 @@ import "../components/slider.css"
 const IndexPage = props => {
   
   const pacjenci = props.data.pacjenci.frontmatter.list;
+  const services = props.data.services.edges[0].node.frontmatter.services;
+  console.log(services)
+
   return(
   <Layout>
     <SEO title="Home" />
@@ -38,7 +42,7 @@ const IndexPage = props => {
         <div className="welcome-content">
           <h1>AnimalVet</h1>
           <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
-        <Button color="#fff" background="#ff6290">Umów wizytę</Button>
+        <Button color="#fff" background="#ff6290"><Link to="/kontakt#kontakt-form">Umów wizytę</Link></Button>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
@@ -56,7 +60,12 @@ const IndexPage = props => {
             <h2>Popularne usługi</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
-        <div className="uslugi-content row">
+        <UslugiSection
+          services={services}
+          isHomepage={true}
+        />
+        {/*<div className="uslugi-content row">
+        
           <div className="uslugi-cart col-4">
             <div className="uslugi-cart-title">
               <div className="uslugi-icon"><img src={surgery} alt="Hirurgia"/></div>
@@ -113,7 +122,7 @@ const IndexPage = props => {
           </Link>
           </div>
           
-        </div>
+  </div>*/}
       </div>
     </section>
     <section id="office">
@@ -241,6 +250,20 @@ query {
             fluid(maxWidth: 360) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
+          }
+        }
+      }
+    }
+  },
+  services : allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "uslugi"}}}) {
+    edges {
+      node {
+        frontmatter {
+          services {
+            description
+            image
+            text
+            title
           }
         }
       }
