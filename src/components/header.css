@@ -34,6 +34,7 @@
   }
   .navbar-item{
     cursor: pointer;
+    position:relative;
   }
   .header nav {
     display: flex;
@@ -175,8 +176,30 @@
 .logo >div:nth-child(2){
   font-weight: 900;
 }
-.navbar-item.active {
-  border-bottom: 3px solid #FF628B;
+.header nav .navbar-item:after {    
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 3px;
+  background: #FF628B;
+  top: auto;
+  background: linear-gradient(to right, #FF628B 50%, #8cd4ff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;}
+.header nav .navbar-item:hover:after{
+   background-position: left bottom;
+}
+.header nav .navbar-item.active:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 3px;
+  background: #FF628B;
 }
   @media(min-width:770px){
       .header .container{
