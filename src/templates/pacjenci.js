@@ -26,7 +26,7 @@ const Pacjenci = (props) => {
     return(
       <Layout>
       <SEO title="Pacjenci" />
-      <Subheader title={"Traktujemy z miłością"}/>
+      <Subheader title={"Dbamy z miłością"}/>
       <div className="container">
       <Breadcrumb
         crumbs={crumbs}

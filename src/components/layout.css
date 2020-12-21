@@ -713,13 +713,13 @@ p{
 }
 .welcome-img {
   position: absolute;
-  width: 80%;
-  max-width: 421px;
-  margin-left: auto;
-  right: -100px;
-  bottom: 88px;
-  z-index: 0;
-  max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    right: -100px;
+    bottom: 88px;
+    z-index: 0;
+    max-height: 100%;
 }
 
 .welcome-content {
@@ -1354,10 +1354,10 @@ section#spec {
 }
 .welcome-img {
   margin-left: 0;
-  max-width: 550px;
+  max-width: 80%;
   bottom: 0;
-  z-index:0;
-  margin-right: 50px;
+  z-index: 0;
+  margin-right: 0;
 }
 
 .welcome-content {

@@ -30,7 +30,7 @@ export default function Template(
   return (
     <Layout>
     <SEO title={frontmatter.title} />
-    <Subheader title={"Traktujemy z miłością"}/>
+    <Subheader title={"Dbamy z miłością"}/>
     <div className="container">
     <Breadcrumb
       crumbs={crumbs}

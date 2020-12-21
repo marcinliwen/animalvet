@@ -212,7 +212,7 @@ function Slidearrow(props) {
 
 export const pageQuery = graphql`
 query {
-  imgOne : file(relativePath: {eq: "doghome.png"}) {
+  imgOne : file(relativePath: {eq: "doghome2.png"}) {
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid_withWebp_noBase64

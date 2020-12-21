@@ -29,7 +29,7 @@ const Kontakt = (props) => {
     return(
       <Layout>
       <SEO title="Kontakt" />
-      <Subheader title={"Traktujemy z miłością"}/>
+      <Subheader title={"Dbamy z miłością"}/>
       <div className="container">
       <Breadcrumb
         crumbs={crumbs}

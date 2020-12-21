@@ -58,7 +58,7 @@ const Footer =() =>(
                 </div>
             </div>
             <div className="footer-bottom">
-                <div className="footer-company">© 2020 - AnimalVet. With love for you</div>
+                <div className="footer-company">© 2020 - AnimalVet. With love for animals</div>
                 <div className="footer-social">
                     <ul>
                         <li><a target='_blank'  href="https://www.facebook.com/AnimalVet-1331193130342453" title="facebook"><img src={facebook} alt="facebook" /></a></li>

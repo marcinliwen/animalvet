@@ -22,7 +22,7 @@ const Uslugi = (props) => {
   return(
     <Layout>
     <SEO title="Usługi" />
-    <Subheader title={"Traktujemy z miłością"}/>
+    <Subheader title={"Dbamy z miłością"}/>
     <div className="container">
     <Breadcrumb
       crumbs={crumbs}

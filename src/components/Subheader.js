@@ -26,7 +26,7 @@ export default function MySubheader (props) {return(
     query={
       graphql`
         query{
-            dogdog : file(relativePath: {eq: "dog_care.png"}) {
+            dogdog : file(relativePath: {eq: "seconddog.png"}) {
                 childImageSharp {
                   fluid{
                     ...GatsbyImageSharpFluid_withWebp_noBase64

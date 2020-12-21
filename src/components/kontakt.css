@@ -42,12 +42,18 @@ section#kontakt-form {
 @media(max-width: 699px){
     .kontakt-link {
         display: block;
-        padding: 12px 30px;
-        background: #F0FAFE;
         margin-bottom: 8px;
         box-shadow: 1px 1px 3px #00000057;
         text-align: center;
+        background: #ff6290;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
         border-radius: 4px;
+        margin: 15px 0;
+    }
+    .kontakt-link span {
+        display: none;
     }
 }
 @media(min-width: 700px){
