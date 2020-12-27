@@ -2,11 +2,15 @@ import { Link } from "gatsby"
 
 import PropTypes from "prop-types"
 import React from "react"
+import { useMenuLinks } from "../hooks/navigation-links"
 
 import facebook from "../images/facebook.svg"
 import instagram from "../images/instagram.svg"
 
-const Footer =() =>(
+const Footer = () =>{
+    const dataLinks = useMenuLinks();
+
+    return(
     <div id="footer">
         <div className="container">
             <div className="footer-top">
@@ -40,20 +44,21 @@ const Footer =() =>(
                 <div className="footer-links">
                     <div className="footer-link-title">Usługi</div>
                     <ul>
-                        <li>Badania kontrolne</li>
-                        <li>RTG</li>
-                        <li>Profilaktyka</li>
-                        <li>Szczepienie</li>
-                        <li>Ortopedia</li>
+                        {dataLinks.map(link=>(
+                            link.submenuLink!=null?
+                                link.submenuLink.map(sublink=>(
+                                    <li key={sublink.name}><Link to={sublink.link}>{sublink.name}</Link></li>
+                                ))
+                            :""
+                        ))}
                     </ul>
                 </div>
                 <div className="footer-links">
                     <div className="footer-link-title">Nawigacja</div>
                     <ul>
-                        <li>Zespół</li>
-                        <li>Nasi klienci</li>
-                        <li>Blog</li>
-                        <li>Kontakt</li>
+                        {dataLinks.map(link=>(
+                            <li key={link.name}><Link to={link.link}>{link.name}</Link></li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -70,5 +75,6 @@ const Footer =() =>(
         
     </div>
 )
+}
 
 export default Footer;

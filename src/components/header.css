@@ -201,6 +201,21 @@
   height: 3px;
   background: #FF628B;
 }
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header nav ul li {
+  display: block;
+  margin: 16px;
+  text-align: left;
+}
+.header nav .submenu {
+  margin-left: 25px;
+}
   @media(min-width:770px){
       .header .container{
         display: flex;
@@ -218,14 +233,61 @@
       .header nav {
         visibility: visible;
         position: static;
-        display: inline-block;
+        display: flex;
         padding: 0;
         box-shadow: none;
         width: auto;
         background: transparent;
-        flex: 1;
+        flex: 1 1;
         text-align: center;
+        height: 65px;
     }
+    .header nav ul {
+      display: flex;
+      height: 100%;
+      flex-direction: revert;
+    }
+    
+    .header nav ul li {
+        display: inline;
+        margin: 0 0 0 10px;
+        position: relative;
+    }
+    ul.submenu {
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+  
+  .header nav .submenu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 54px;
+      left: 10px;
+      height: auto;
+      margin: 0;
+      background: #8cd4ff;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 1px 1px 5px rgb(0 0 0 / 0.3);
+      transition: all .3s ease-out;
+  }
+  .header nav > ul > li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    
+  }
+  .header nav ul.submenu li {
+    padding: 5px 15px;
+    white-space: nowrap;
+    transition: all .3s ease-out;
+    margin: 0;
+  }
+  .header nav ul.submenu li:hover {
+    background: #b6e3fd;
+}
     .header nav a{
       color: #2b2b2b;
     }
@@ -244,6 +306,7 @@
         padding: 0;
         margin: 0 0 0 10px;
         color: #000;
+        line-height: 65px;
     }
     .contact a {
       color: #000;

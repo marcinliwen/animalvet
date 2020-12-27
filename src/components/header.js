@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
 import { globalHistory as history } from '@reach/router'
 
+import { useMenuLinks } from "../hooks/navigation-links"
 
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
@@ -23,7 +24,9 @@ const Header = (props) => {
 
   const { location, navigate } = history
  
-  const currentLocation = location.pathname.split('/');
+  const currentLocation = location.pathname;
+
+  const dataLinks = useMenuLinks();
 
   return(
   <header>    
@@ -58,10 +61,29 @@ const Header = (props) => {
 
         <nav 
           className={menu?"-open":""}
-          //onKeyDown={toggleHamburger}
-          //onClick={toggleHamburger}
         >
-      
+          <ul>
+          {dataLinks.map(link=>(
+            <li>
+              <Link 
+              key={link.name} 
+              to={link.link}
+              activeClass="active"
+              onClick={toggleHamburger}
+              className={`navbar-item ${currentLocation.includes(link.link) ? "active" :""}`} 
+            >{link.name}</Link>
+            {link.submenuLink!=null
+            ?<ul className="submenu">
+              {link.submenuLink.map(sublink=>(
+                <li key={sublink.name}><Link to={sublink.link}>{sublink.name}</Link></li>
+              ))}
+            </ul>
+            :""}
+            </li>
+           
+          ))}
+          </ul>
+      {/*
         <Link className={`navbar-item ${currentLocation.includes("uslugi") ? "active" :""}`} 
           activeClass="active"
           to="/uslugi"
@@ -90,17 +112,6 @@ const Header = (props) => {
         >
           Nasi pacjenci
         </Link>
-        {/*<Link className={`navbar-item ${currentLocation.includes("blog") ? "active" :""}`} 
-          activeClass="active"
-          to="/blog"
-          //spy={true}
-          //smooth={true}
-          //offset={-65}
-          //duration={1000}
-          onClick={toggleHamburger}
-        >
-          Blog
-    </Link>*/}
         <Link className={`navbar-item ${currentLocation.includes("kontakt") ? "active" :""}`} 
           activeClass="active"
           to="/kontakt"
@@ -108,7 +119,7 @@ const Header = (props) => {
         >
           Kontakt
         </Link>
-
+      */}
         <div className="contact mobile"><div><a href="tel:+48600700800">600 700 800</a> </div></div>
         </nav>
         <div className="nav_back"  onClick={toggleHamburger}></div>

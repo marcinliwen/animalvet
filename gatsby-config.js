@@ -7,6 +7,46 @@ module.exports = {
     title: `AnimalVet `,
     description: `Gabinet Weterynaryjny - AnimalVet. Opieka, leczenie, porady.`,
     author: `MarcinL`,
+    menuLinks: [
+      {
+        name: 'Usługi',
+        link:'/uslugi',
+        submenuLink:[
+          {
+            name: 'Chirurgia',
+            link: '/uslugi/chirurgia'
+          },
+          {
+            name: 'Profilaktyka',
+            link: '/uslugi/profilaktyka'
+          },
+          {
+            name: 'Diagnostyka',
+            link: '/uslugi/diagnostyka'
+          },
+          {
+            name: 'Badania kontrolne',
+            link: '/uslugi/badania_kontrolne'
+          },
+          {
+            name: 'Szczepienia',
+            link: '/uslugi/szczepienia'
+          }
+        ]
+      },
+      {
+        name: 'O nas',
+        link: '/onas'
+      },
+      {
+        name: 'Nasi pacjenci',
+        link: '/pacjenci'
+      },
+      {
+        name: 'Kontakt',
+        link: '/kontakt'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
