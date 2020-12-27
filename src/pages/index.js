@@ -25,6 +25,7 @@ import bandage from "../images/bandage.svg"
 import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
 import time from "../images/time.svg"
+import clinic from "../images/clinic.svg"
 
 import "../components/slider.css"
 
@@ -48,6 +49,7 @@ const IndexPage = props => {
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
         </div>
         <div className="welcome-opening"> 
+          <div className="desctop"><img src={clinic} alt="klinika" />Jesteśmy otwarci!</div>
           <div className="address"><img src={location} alt="Lokacja"/>Zasieki 4B</div>
           <div className="days"><img src={calendar} alt="Kalendarz"/>Pn - Pt</div>
           <div className="hours"><img src={time} alt="Czas"/>10:00 - 16:00</div>
