@@ -310,5 +310,20 @@
     }
     .contact a {
       color: #000;
+      padding: 0 22px;
+      line-height: 36px;
+      border-radius: 4px;
+      height: 36px;
+      box-shadow: 1px 1px 0px 0px #0000009e;
+      border: 1px solid #000000d1;
+      transition: all .3s ease-out;
+      display: block;
+      font-size: 14px;
     }
+    .contact a:hover {
+      box-shadow: 1px 1px 4px 0px #0000009e;
+    }
+    .contact a:focus{
+      box-shadow: 1px 1px 1px 0px #0000009e;
+  }
   }  

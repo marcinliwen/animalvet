@@ -43,14 +43,12 @@ section#kontakt-form {
     .kontakt-link {
         display: block;
         margin-bottom: 8px;
-        box-shadow: 1px 1px 3px #00000057;
         text-align: center;
-        background: #ff6290;
-        color: #fff;
-        border: none;
-        padding: 8px 16px;
+        border: 1px solid #000000d1;
+        padding: 6px 16px;
         border-radius: 4px;
-        margin: 15px 0;
+        margin: 20px 0;
+        box-shadow: 1px 1px 0px 0px #0000009e;
     }
     .kontakt-link span {
         display: none;
@@ -63,11 +61,23 @@ section#kontakt-form {
     .kontakt-header {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     }
     
     .kontakt-header a {
         margin-left: 25px;
-        padding: 0;
-        line-height: 46px;
+        padding: 0 22px;
+        line-height: 34px;
+        border-radius: 4px;
+        height: 36px;
+        box-shadow: 1px 1px 0px 0px #0000009e;
+            border: 1px solid #000000d1;
+    transition: all .3s ease-out;
+    }
+    .kontakt-header a:hover {
+        box-shadow: 1px 1px 4px 0px #0000009e;
+    }
+    .kontakt-header a:focus{
+        box-shadow: 1px 1px 1px 0px #0000009e;
     }
 }

@@ -751,6 +751,14 @@ button {
   border-radius: 4px;
   margin: 36px 0;
   cursor: pointer;
+  box-shadow: 1px 1px 0px #672135a3;
+  transition: all .3s ease-out;
+}
+button:hover {
+  box-shadow: 1px 1px 4px 0px #672135a3;
+}
+button:hover:focus, button:hover:active {
+  box-shadow: 1px 1px 1px 0px #672135a3;
 }
 body{
   background: #fff;

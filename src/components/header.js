@@ -5,6 +5,7 @@ import React, {useState, useEffect} from "react"
 import { globalHistory as history } from '@reach/router'
 
 import { useMenuLinks } from "../hooks/navigation-links"
+import { useKontaktInfo } from "../hooks/kontakt-hook"
 
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
@@ -27,6 +28,8 @@ const Header = (props) => {
   const currentLocation = location.pathname;
 
   const dataLinks = useMenuLinks();
+
+  const { phone_number , phone_display } = useKontaktInfo();
 
   return(
   <header>    
@@ -120,14 +123,13 @@ const Header = (props) => {
           Kontakt
         </Link>
       */}
-        <div className="contact mobile"><div><a href="tel:+48600700800">600 700 800</a> </div></div>
+        <div className="contact mobile"><div><a href={`tel:${phone_number}`}>{phone_display}</a> </div></div>
         </nav>
         <div className="nav_back"  onClick={toggleHamburger}></div>
         <div className="h_banner">
         <div className="contact">
-          <a href="tel:+48600700800">
-            <img src={phone} width="16px" height="16px" alt="telefon" style={{marginRight:"8px", verticalAlign:"text-top"}}/>  
-            600 700 800
+          <a href={`tel:${phone_number}`}>
+            {phone_display}
             </a>
         </div>
       </div>

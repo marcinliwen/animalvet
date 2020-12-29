@@ -33,7 +33,6 @@ const IndexPage = props => {
   
   const pacjenci = props.data.pacjenci.frontmatter.list;
   const services = props.data.services.edges[0].node.frontmatter.services;
-  console.log(services)
 
   return(
   <Layout>

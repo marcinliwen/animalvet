@@ -7,6 +7,13 @@ module.exports = {
     title: `AnimalVet `,
     description: `Gabinet Weterynaryjny - AnimalVet. Opieka, leczenie, porady.`,
     author: `MarcinL`,
+    phone_number: "+48506109445",
+    phone_display: "+48 506 109 445",
+    whatsup_number: "48506109445",
+    address: "Zasieki 4B, 68-343 Zasieki",
+    mail: "animalvet@gmail.com",
+    open_day:"PN - PT",
+    open_hours: "10:00 - 16:00",
     menuLinks: [
       {
         name: 'Usługi',
