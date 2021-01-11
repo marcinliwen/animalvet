@@ -42,7 +42,7 @@ const IndexPage = props => {
         <div className="welcome-content">
           <h1>AnimalVet</h1>
           <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
-        <Button color="#fff" background="#ff6290"><Link to="/kontakt#kontakt-form">Umów wizytę</Link></Button>
+          <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#ff6290">Umów wizytę</Button></Link>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
@@ -150,7 +150,7 @@ const IndexPage = props => {
           <h2>Zaufali nam</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <Button color="#fff" background="#ff6290"><Link activeClass="active" to="pacjenci">Nasi pacjenci</Link></Button>
+          <Link activeClass="active" to="pacjenci"><Button color="#fff" background="#ff6290">Nasi pacjenci</Button></Link>
         </div>
         <div className="col-8 slider">
           <Pacjencicarousel pacjenci={pacjenci} />

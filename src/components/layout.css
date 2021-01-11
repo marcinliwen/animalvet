@@ -725,6 +725,8 @@ p{
 .welcome-content {
   width: 100%;
  max-width: 400px;
+ position: relative;
+    z-index: 2;
 }
 
 section#welcome .container {
@@ -883,18 +885,21 @@ section#uslugi {
   line-height: 34px;
 }
 .uslugi-more span {
-  font-size: 14px;
+  font-size: 11px;
   margin-right: 12px;
-  font-variant-caps: petite-caps;
-  font-weight: bold;
-  font-family:'Montserrat', sans-serif;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
-
+.uslugi-more:hover {
+  margin-left: 15px;
+}
 .uslugi-more {
   margin: 25px 0 0 0;
   display: flex;
   cursor: pointer;
   align-items: center;
+  transition: all .3s ease-out;
 }
 
 .uslugi-more svg {

@@ -210,7 +210,7 @@
 
 .header nav ul li {
   display: block;
-  margin: 16px;
+  margin: 16px 16px 0 16px;
   text-align: left;
 }
 .header nav .submenu {
