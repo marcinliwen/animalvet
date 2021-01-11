@@ -42,7 +42,7 @@ export default function Template(
         <div className="container">
           <h2>{frontmatter.title}</h2>
           <div className="row">
-            <div className="col-4 services-nav">
+            <div className="col-4 services-nav desctop">
               <h4>Katalog usług</h4>
               <UslugiNav services={services} />
             </div>
