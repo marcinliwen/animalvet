@@ -48,10 +48,12 @@ const IndexPage = props => {
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
         </div>
         <div className="welcome-opening"> 
+        
           <div className="desctop"><img src={clinic} alt="klinika" />Jesteśmy otwarci!</div>
-          <div className="address"><img src={location} alt="Lokacja"/>Zasieki 4B</div>
-          <div className="days"><img src={calendar} alt="Kalendarz"/>Pn - Pt</div>
-          <div className="hours"><img src={time} alt="Czas"/>10:00 - 16:00</div>
+          <div className="address"><Link style={{display:"block"}} to={"/kontakt#kontakt"}><img src={location} alt="Lokacja"/>Zasieki 4B</Link></div>
+          
+          <div className="days"><Link style={{display:"block"}} to={"/kontakt#kontakt"}><img src={calendar} alt="Kalendarz"/>Pn - Pt</Link></div>
+          <div className="hours"><Link style={{display:"block"}} to={"/kontakt#kontakt"}><img src={time} alt="Czas"/>10:00 - 16:00</Link></div>
         </div>
       </div>
     </section>
