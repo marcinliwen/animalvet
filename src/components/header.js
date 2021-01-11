@@ -20,7 +20,9 @@ const Header = (props) => {
   useEffect(() => {
     // Zaktualizuj tytuł dokumentu korzystając z interfejsu API przeglądarki
     if(menu){document.body.classList.add('menu-open')}
-    else{document.body.classList.remove('menu-open')}
+    else{ 
+      document.body.classList.remove('menu-open')
+    }
   });
 
   const { location, navigate } = history
@@ -123,7 +125,7 @@ const Header = (props) => {
           Kontakt
         </Link>
       */}
-        <div className="contact mobile"><div><a href={`tel:${phone_number}`}>{phone_display}</a> </div></div>
+        {/*<div className="contact mobile"><div><a href={`tel:${phone_number}`}>{phone_display}</a> </div></div>*/}
         </nav>
         <div className="nav_back"  onClick={toggleHamburger}></div>
         <div className="h_banner">

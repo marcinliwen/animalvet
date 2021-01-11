@@ -62,7 +62,8 @@ class Pacjencicarousel extends React.Component{
                  :<Slidearrow style={{ color: '#000', fontSize: "25px", transform: "scaleX(-1)" }}/>}
                 
               </button>
-              <div>{this.state.current + 1} / {this.props.pacjenci.length}</div>
+              <div>
+                  <span className={this.state.current < 1 ? "inactive" :""} >{this.state.current + 1}</span> / <span className={this.state.current >= this.props.pacjenci.length - 1 ? "inactive" :""}>{this.props.pacjenci.length}</span></div>
               <button  onClick={this.next}>
               {this.state.current >= this.props.pacjenci.length - 1 ? 
                 <Slidearrow style={{ color: '#bcbcbc', fontSize: "25px" }}/>
@@ -80,8 +81,10 @@ export default Pacjencicarousel;
 
 function Slidearrow(props) {
     return (
-      <SvgIcon {...props} viewBox="0 0 16 8">
-        <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM0 4.5L15 4.5V3.5L0 3.5L0 4.5Z" />
+      <SvgIcon {...props} viewBox="0 0 32 14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.8642 7.45802H0.864243V6.45802H30.8642V7.45802Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.4054 0.94283L31.7032 6.94512L31.0133 7.66901L24.7155 1.66672L25.4054 0.94283Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24.6229 12.9161L30.6382 6.63069L31.3606 7.3221L25.3454 13.6075L24.6229 12.9161Z"/>
       </SvgIcon>
     );
   }

@@ -111,24 +111,30 @@
   align-items: center;
 }
 .slider-nav {
-  top: 500px;
+  bottom: 385px;
     width: 100%;
-    left: 0;
-    justify-content: center;
-    bottom: auto;
+    left: 22px;
+    justify-content: left;
+    top: auto;
     display: flex;
     align-items: center;
     margin-top: 0;
     position: absolute;
     z-index: 6;
 }
-
+.slider-nav .inactive {
+  color: #BCBCBC;
+}
 
 .slider-nav button {
   margin: 0 8px;
   padding: 0;
   height: 25px;
   background: none;
+  cursor: pointer;
+}
+.slider-nav .MuiSvgIcon-root {
+  width: 32px;
 }
   @media (min-width: 770px){
     .slider {

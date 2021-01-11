@@ -62,10 +62,11 @@ section#kontakt-form {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
     }
     
     .kontakt-header a {
-        margin-left: 25px;
+        margin-left: 20px;
         padding: 0 22px;
         line-height: 34px;
         border-radius: 4px;

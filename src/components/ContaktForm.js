@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="col-12 kontakt-header">
             <h3 style={{marginBottom:"0px"}}>Umów się na wizytę</h3>
             <a className="kontakt-link" href={`tel:${whatsup_number}`} target="_blank">{/*<span><img src={phone} width="18px" height="18px"/></span> */}<p>+48 506 109 445</p></a>
-            <a className="kontakt-link" href={`http://wa.me/${whatsup_number}/?text=${wiadomosc}`} target="_blank">{/*<span><img src={whatsapp} width="18px" height="18px"/></span> */}<p>Whats up!</p></a>
+            <a className="kontakt-link" href={`http://wa.me/${whatsup_number}/?text=${wiadomosc}`} target="_blank">{/*<span><img src={whatsapp} width="18px" height="18px"/></span> */}<p>WhatsApp</p></a>
             <a className="kontakt-link" href="http://m.me/1331193130342453" target="_blank">{/*<span><img src={messenger} width="18px" height="18px"/> </span>*/}<p>Messenger</p></a>
             <p>lub napisz do nas jak możemy pomóc Twojemu pupilowi.</p>            
           </div>
@@ -86,7 +86,7 @@ export default function Contact() {
           </div>
           <div className="desctop">
           <div className="form-group">
-            <button type="submit">Wyślij wiadomość</button>
+            <button className="btn" type="submit">Wyślij wiadomość</button>
           </div>
           </div>
           
@@ -101,7 +101,7 @@ export default function Contact() {
           </div>
           <div className="mobile">
           <div className="form-group ">
-            <button type="submit">Wyślij wiadomość</button>
+            <button className="btn" type="submit">Wyślij wiadomość</button>
           </div>
           </div>
          

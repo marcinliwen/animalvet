@@ -38,7 +38,7 @@ class MailChimpForm extends React.Component {
                         <form onSubmit={this._handleSubmit}>
                             <div className="form-group">
                                 <input type="email" placeholder="E-mail" onChange={this.handleChange}/>
-                                <button type="submit" >Zapisz się!</button>
+                                <button className="btn" type="submit" >Zapisz się!</button>
                             </div>
                             
                         </form>
