@@ -19,9 +19,13 @@ const Header = (props) => {
 
   useEffect(() => {
     // Zaktualizuj tytuł dokumentu korzystając z interfejsu API przeglądarki
-    if(menu){document.body.classList.add('menu-open')}
+    if(menu){
+      document.querySelector("html").classList.add('menu-open')
+      console.log(document.querySelector("html"))
+    }
     else{ 
-      document.body.classList.remove('menu-open')
+      console.log(document.querySelector("html"))
+      document.querySelector("html").classList.remove('menu-open')
     }
   });
 

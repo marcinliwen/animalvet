@@ -65,7 +65,7 @@
     visibility: hidden;
   }
   @media(max-width: 770px){
-    body.menu-open {
+    .menu-open {
       overflow: hidden;
     }
     
