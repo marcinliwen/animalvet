@@ -11,8 +11,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "../components/Footer"
+import MobileContact from "../components/MobileContact"
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,6 +41,7 @@ const Layout = ({ children }) => {
         logged_out_greeting="Dzień dobry, jak możemy Ci pomóc?"
 
         />*/}
+        <MobileContact />
         <Footer />
       </div>
     </>
