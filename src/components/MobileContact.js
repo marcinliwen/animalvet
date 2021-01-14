@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SpeedDial from '@material-ui/lab/SpeedDial';
@@ -24,6 +24,7 @@ const theme = createMuiTheme({
       MuiSpeedDial: {
         // Name of the rule
         root:{
+          alignItems: 'flex-end',
           '@media (min-width: 700px)':{
             display: 'none',
           }
@@ -63,14 +64,14 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-const whatsup_number = '506109445';
+const whatsup_number = '+48506109445';
 
 const wiadomosc = "Dzień dobry, chciałbym umówić się na wizytę";
 
 const actions = [
-  { icon: <PhoneIcon fontSize="small"/>, name: '+48500600700', link:`tel:${whatsup_number}` },
-  { icon: <WhatsAppIcon  fontSize="small"/>, name: 'WhatsApp', link:`http://wa.me/${whatsup_number}/?text=${wiadomosc}`  },
-  { icon: <MessengerIcon /> ,name: 'Messenger', link:'http://m.me/1331193130342453' },
+  { icon: <PhoneIcon fontSize="small"/>, name: '+48 506 109 445', link:`tel:${whatsup_number}`, d_open: "30", d_close:"60" },
+  { icon: <WhatsAppIcon  fontSize="small"/>, name: 'WhatsApp', link:`http://wa.me/${whatsup_number}/?text=${wiadomosc}` , d_open: "60", d_close:"30" },
+  { icon: <MessengerIcon /> ,name: 'Messenger', link:'http://m.me/1331193130342453', d_open:"90" , d_close:"0"},
   
 ];
 
@@ -85,12 +86,14 @@ export default function OpenIconSpeedDial() {
 
   const handleOpen = () => {
     setOpen(true);
+   
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
+  
   const handleActionCLick = (e,link) =>{
     console.log(link);
     e.preventDefault();
@@ -110,7 +113,7 @@ export default function OpenIconSpeedDial() {
         open={open}
       >
         {actions.map((action) => (
-          <SpeedDialAction
+          /*<SpeedDialAction
             key={action.name}
             icon={action.icon}
             tooltipTitle={action.name}
@@ -120,7 +123,9 @@ export default function OpenIconSpeedDial() {
               handleClose();
             }
             }
-          />
+          />*/
+         
+          <a className="speed_link" style={{transitionDelay:(open ?`${action.d_open}ms`: `${action.d_close}ms`) }} href={action.link}> {action.name}</a>
         ))}
       </SpeedDial>
       </ThemeProvider>
