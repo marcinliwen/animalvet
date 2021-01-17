@@ -10,6 +10,7 @@ export const useKontaktInfo = () => {
                     phone_display,
                     whatsup_number,
                     address,
+                    post_code,
                     mail,
                     open_day,
                     open_hours

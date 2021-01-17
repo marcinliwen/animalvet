@@ -3,6 +3,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { useMenuLinks } from "../hooks/navigation-links"
+import { useKontaktInfo } from "../hooks/kontakt-hook"
+
+import { Helmet } from "react-helmet"
+
 
 import facebook from "../images/facebook.svg"
 import instagram from "../images/instagram.svg"
@@ -10,6 +14,7 @@ import instagram from "../images/instagram.svg"
 const Footer = () =>{
     const dataLinks = useMenuLinks();
 
+    const {phone_display, mail, address, post_code } =useKontaktInfo();
     return(
     <div id="footer">
         <div className="container">
@@ -35,10 +40,10 @@ const Footer = () =>{
                 <div className="footer-links">
                     <div className="footer-link-title">Kontakt</div>
                     <ul>
-                        <li>500 600 700</li>
-                        <li>adresmailowy@firma.pl</li>
-                        <li>Zasieki 4B</li>
-                        <li>68-343 Zasieki</li>
+                        <li>{phone_display}</li>
+                        <li>{mail}</li>
+                        <li>{address}</li>
+                        <li>{post_code}</li>
                     </ul>
                 </div>
                 <div className="footer-links">
