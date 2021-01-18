@@ -38,27 +38,6 @@ const IndexPage = props => {
   return(
   <Layout>
     <SEO title="Home" />
-    <Helmet>
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "http://www.example.com",
-              "logo": "http://www.example.com/images/logo.png",
-              "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "url": "https://www.animalwet.com",
-                    "name": "ANimalWet",
-                    "contactPoint": {
-                        "@type": "ContactPoint",
-                        "telephone": "phone_display",
-                        "contactType": "Umów wizytę"
-                    }
-            }
-          `}
-        </script>
-      </Helmet>
     <section id="welcome">
       <div className="container">
         <div className="welcome-content">

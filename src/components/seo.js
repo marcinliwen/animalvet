@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            logo
           }
         }
       }
@@ -27,6 +28,14 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
+  const logoData = {
+    
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "http://www.example.com",
+      "logo": site.siteMetadata.logo
+    
+  }
   return (
     <Helmet
       htmlAttributes={{
@@ -68,7 +77,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(logoData)}</script>
+    </Helmet>
   )
 }
 

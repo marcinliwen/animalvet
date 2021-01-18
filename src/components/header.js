@@ -37,6 +37,7 @@ const Header = (props) => {
 
   const { phone_number , phone_display } = useKontaktInfo();
 
+  console.log(props.logo);
   return(
   <header>    
      <div
@@ -61,7 +62,7 @@ const Header = (props) => {
             to="/"
           >
             <div className="logo">
-          <div>Animal</div><div>Vet</div>
+            <img src={props.logo} alt="logo" width="52px" />
             </div>
           
           </Link>

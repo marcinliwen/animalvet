@@ -21,15 +21,20 @@ const Layout = ({ children }) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          title,
+          logo
         }
+      },
+      file(absolutePath: {regex: "/images/logo.png/"}) {
+        absolutePath
+        relativePath
       }
     }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} logo={data.site.siteMetadata.logo}/>
       <div>
         <main>{children}</main>
         {/*<MessengerCustomerChat
