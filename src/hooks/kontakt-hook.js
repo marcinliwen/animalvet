@@ -9,8 +9,9 @@ export const useKontaktInfo = () => {
                     phone_number,
                     phone_display,
                     whatsup_number,
-                    address,
+                    street,
                     post_code,
+                    city,
                     mail,
                     open_day,
                     open_hours

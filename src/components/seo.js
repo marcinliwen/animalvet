@@ -20,6 +20,10 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             logo
+            siteURL
+            city
+            street
+            post_code
           }
         }
       }
@@ -28,14 +32,25 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const logoData = {
+  const seoData = {
     
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "http://www.example.com",
-      "logo": site.siteMetadata.logo
-    
+      "@type": "Organisation",
+      "url": site.siteMetadata.siteURL,
+      "logo": site.siteMetadata.logo,
+
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": site.siteMetadata.title,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": site.siteMetadata.city +", Polska",
+        "postalCode": site.siteMetadata.post_code,
+        "streetAddress": site.siteMetadata.street
+      },
   }
+
+  
   return (
     <Helmet
       htmlAttributes={{
@@ -78,7 +93,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <script type="application/ld+json">{JSON.stringify(logoData)}</script>
+      <script type="application/ld+json">{JSON.stringify(seoData)}</script>
     </Helmet>
   )
 }
