@@ -33,13 +33,13 @@ const theme = createMuiTheme({
           // Some CSS
          width: '42px',
          height: '42px',
-         backgroundColor: '#ff6290',
+         backgroundColor: '#F24C3D',
          '&:hover':{
-            backgroundColor: '#ff6290',
+            backgroundColor: '#F24C3D',
          },
          '@media (hover: none)': {
             '&:hover': {
-                backgroundColor: '#ff6290',
+                backgroundColor: '#F24C3D',
             },
           },
         },

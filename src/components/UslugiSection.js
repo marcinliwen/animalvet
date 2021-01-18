@@ -54,7 +54,7 @@ const Services = ({props}) =>{
     {props.isHomepage? 
     <div className="uslugi-cart for-btn col-4">
     <Link to="/uslugi" >
-      <Button color="#fff" background="#ff6290">Poznaj nasze usługi </Button>
+      <Button color="#fff" background="#F24C3D">Poznaj nasze usługi </Button>
     </Link>
     </div>:""}
   </div>

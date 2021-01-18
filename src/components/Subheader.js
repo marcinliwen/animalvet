@@ -12,7 +12,7 @@ const Subheader = (props) =>(
       <div className="container">
         <div className="-content">
             <h2>{props.title}</h2>
-            <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#ff6290">Umów wizytę</Button></Link>
+            <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#F24C3D">Umów wizytę</Button></Link>
         </div>
         <div className="-img">
         <Img fluid={props.data.dogdog.childImageSharp.fluid} />

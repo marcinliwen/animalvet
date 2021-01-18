@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           pageId="1480527812217145"
           appId="296614704926289"
               page_id="1480527812217145"
-        theme_color="#ff6290"
+        theme_color="#F24C3D"
         logged_in_greeting="Dzień dobry, jak możemy Ci pomóc?"
         logged_out_greeting="Dzień dobry, jak możemy Ci pomóc?"
 

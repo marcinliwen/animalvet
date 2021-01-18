@@ -50,7 +50,7 @@
     transition-duration: 0.4s;
     width: calc(100% - 76px);
     padding-top: 46px;
-    background: #8cd4ff;
+    background: #8EE7FF;
     align-items: center;
   }
   .nav_back{
@@ -165,7 +165,7 @@
 .logo {
     line-height: 22px;
     font-size: 28px;
-    color: #FF628B;
+    color: #F24C3D;
 }
 
 .logo >div:nth-child(1) {
@@ -183,10 +183,10 @@
   right: 0;
   bottom: -5px;
   height: 3px;
-  background: #FF628B;
+  background: #F24C3D;
   top: auto;
-  background: linear-gradient(to right, #FF628B 50%, #8cd4ff 50%);
-  background-size: 200% 100%;
+  background: linear-gradient(to right, #F24C3D 50%, #8EE7FF 50%);
+  background-size: 202% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;}
 .header nav .navbar-item:hover:after{
@@ -199,7 +199,7 @@
   right: 0;
   bottom: -5px;
   height: 3px;
-  background: #FF628B;
+  background: #F24C3D;
 }
 .header nav ul {
   list-style: none;
@@ -267,7 +267,7 @@
       left: 10px;
       height: auto;
       margin: 0;
-      background: #8cd4ff;
+      background: #8EE7FF;
       font-size: 14px;
       opacity: 0;
       visibility: hidden;

@@ -102,7 +102,7 @@ const Kontakt = (props) => {
               <div className="col-4">
                 <Img 
                   fluid={props.data.imgContakt.childImageSharp.fluid} 
-                  placeholderStyle={{"backgroundColor": "#8cd4ff" }}
+                  placeholderStyle={{"backgroundColor": "#8EE7FF" }}
                   className="main-background"
                   />
               </div>

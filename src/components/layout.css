@@ -715,7 +715,8 @@ p{
   padding-top: 65px;
   min-height: 100vh;
   display: flex;
-  background: #8cd4ff;
+  background: #8EE7FF;
+  background: linear-gradient(180deg, #8EE7FF 60%, #5ED6F4 100%);
 }
 .welcome-img {
   position: absolute;
@@ -743,10 +744,10 @@ section#welcome .container {
   align-items: flex-end;
 }
 .main-text{
-  color: #ff6290;
+  color: #F24C3D;
 }
 .main-background{
-  background: #8cd4ff;
+  background: #8EE7FF;
 }
 .background__secondadry{
   background: #fafafa;
@@ -755,7 +756,7 @@ button{
   border: none;
 }
 .btn {
-  background: #ff6290;
+  background: #F24C3D;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -775,7 +776,7 @@ body{
   background: #fff;
 }
 h1{
-  color: #ff6290;
+  color: #F24C3D;
     font-weight: 900;
 }
 .welcome-content h1 {
@@ -789,7 +790,7 @@ h1{
 }
 
 .welcome-opening {
-  background: #ff6290;
+  background: #F24C3D;
   width: calc(100% + 30px);
   margin-left: -15px;
   margin-right: -15px;
@@ -801,7 +802,7 @@ h1{
   content: "";
   width: 50%;
   height: 3px;
-  background: #ff6290;
+  background: #F24C3D;
   display: block;
   margin-top: 15px;
 }
@@ -878,7 +879,7 @@ section#uslugi {
   display: block;
   position: relative;
 }
-.uslugi-cart-title .uslugi-icon:after {content: "";width: 32px;height: 32px;background: #8cd4ff57;position: absolute;z-index: 0;border-radius: 50%;left: 8px;top: -13px;}
+.uslugi-cart-title .uslugi-icon:after {content: "";width: 32px;height: 32px;background: #8EE7FF57;position: absolute;z-index: 0;border-radius: 50%;left: 8px;top: -13px;}
 .uslugi-content button {
   margin-left: auto;
   margin-right: auto;
@@ -1090,6 +1091,7 @@ section#office {
 #subscribe {
   padding: 32px 0;
   padding-bottom: 0px;
+  background: linear-gradient(180deg, #8EE7FF 60%, #5ED6F4 100%);
 }
 section#subscribe input {
   margin-right: -5px;

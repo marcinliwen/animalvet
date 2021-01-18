@@ -1,6 +1,7 @@
 .subheader {
     max-height: 50%;
     padding-top: 65px;
+    background: linear-gradient(180deg, #8EE7FF 60%, #5ED6F4 100%);
 }
 
 .subheader .container {
@@ -28,11 +29,11 @@
     font-weight: 900;
     line-height: 46px;
     margin: 32px 0;
-    color: #ff6290;
+    color: #F24C3D;
     max-width: 250px;
 }
 
-.subheader .-content h2:after {content: "";height: 3px;width: 60%;background: #ff6290;display: block;margin-top: 8px;}
+.subheader .-content h2:after {content: "";height: 3px;width: 60%;background: #F24C3D;display: block;margin-top: 8px;}
 
 @media (min-width: 770px){
     .subheader .-content h2 {

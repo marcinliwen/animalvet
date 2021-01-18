@@ -64,7 +64,7 @@ const IndexPage = props => {
         <div className="welcome-content">
           <h1>AnimalVet</h1>
           <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
-          <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#ff6290">Umów wizytę</Button></Link>
+          <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#F24C3D">Umów wizytę</Button></Link>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />
@@ -143,7 +143,7 @@ const IndexPage = props => {
           </div>
           <div className="uslugi-cart for-btn col-4">
           <Link to="/uslugi" >
-            <Button color="#fff" background="#ff6290">Poznaj nasze usługi </Button>
+            <Button color="#fff" background="#F24C3D">Poznaj nasze usługi </Button>
           </Link>
           </div>
           
@@ -174,7 +174,7 @@ const IndexPage = props => {
           <h2>Zaufali nam</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <Link activeClass="active" to="pacjenci"><Button color="#fff" background="#ff6290">Nasi pacjenci</Button></Link>
+          <Link activeClass="active" to="pacjenci"><Button color="#fff" background="#F24C3D">Nasi pacjenci</Button></Link>
         </div>
         <div className="col-8 slider">
           <Pacjencicarousel pacjenci={pacjenci} />
