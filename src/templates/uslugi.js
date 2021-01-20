@@ -21,7 +21,7 @@ const Uslugi = (props) => {
 
   return(
     <Layout>
-    <SEO title="Usługi" />
+    <SEO title="Usługi" pathname={props.location.pathname}/>
     <Subheader title={"Dbamy z miłością"}/>
     <div className="container">
     <Breadcrumb

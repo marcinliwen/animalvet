@@ -27,9 +27,10 @@ export default function Template(
 
   const customCrumbLabel = props.location.pathname.replace('/', ' ');
   const currentCrumbName = customCrumbLabel.slice(customCrumbLabel.lastIndexOf('/') + 1);
+
   return (
     <Layout>
-    <SEO title={frontmatter.title} />
+    <SEO title={frontmatter.title} pathname={props.location.pathname} subservices={true}/>
     <Subheader title={"Dbamy z miłością"}/>
     <div className="container">
     <Breadcrumb

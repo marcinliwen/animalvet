@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, pathname, subservices }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,6 +24,7 @@ function SEO({ description, lang, meta, title }) {
             city
             street
             post_code
+            phone_display
           }
         }
       }
@@ -32,25 +33,117 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
 
-  const seoData = {
-    
-      "@context": "https://schema.org",
-      "@type": "Organisation",
-      "url": site.siteMetadata.siteURL,
-      "logo": site.siteMetadata.logo,
-
+  const seoData = { 
       "@context": "https://schema.org",
       "@type": "VeterinaryCare",
       "name": site.siteMetadata.title,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": site.siteMetadata.city +", Polska",
+        "addressLocality": site.siteMetadata.city,
         "postalCode": site.siteMetadata.post_code,
-        "streetAddress": site.siteMetadata.street
+        "streetAddress": site.siteMetadata.street,
+        "addressCountry" : "PL"
       },
+      "name" :site.siteMetadata.title,
+      "telephone": site.siteMetadata.phone_display,
+      "description": site.siteMetadata.description,
+      "image":"/img/animalvet.png",
+      "url": site.siteMetadata.siteURL,
+      "knowsLanguage": "de-DE",
+      "knowsLanguage": "pl-PL",
+      "logo": site.siteMetadata.logo,
+      "isAcceptingNewPatients": true,
+      "brand" : [
+        {
+          "@type":"Service",
+          "serviceType" : "Pet care",
+          "provider": {
+            "@type": "VeterinaryCare",
+            "name": site.siteMetadata.title
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "16:00"
+        },
+      ],
   }
 
+  const seoLogo = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": site.siteMetadata.siteURL,
+    "logo": site.siteMetadata.siteURL + site.siteMetadata.logo,
+  };
+  //breadcrumb seo
   
+  
+  
+  var seo;
+if(subservices){
+  var urlSubs = pathname.substring(1, (pathname.lastIndexOf("/")));
+  
+   seo = { 
+    url: `${site.siteMetadata.siteURL}${pathname.substring(0, (pathname.lastIndexOf("/"))) || ''}`,
+    urlSubservices: `${site.siteMetadata.siteURL}${pathname || ''}`,
+    titleSubservices: urlSubs.charAt(0).toUpperCase() + urlSubs.slice(1)
+  };
+} else{
+ seo = { url: `${site.siteMetadata.siteURL}${pathname || ''}` };
+
+} 
+ 
+
+  // Initial breadcrumb list
+  const itemListElement = [
+    {
+      '@type': 'ListItem',
+      item: {
+        '@id': site.siteMetadata.siteURL,
+        name: 'Homepage',
+      },
+      position: 1,
+    },
+  ];
+
+  // Push current blogpost into breadcrumb list
+  itemListElement.push({
+    '@type': 'ListItem',
+    item: {
+      '@id': seo.url,
+      name: seo.titleSubservices || title,
+    },
+    position: 2,
+  });
+
+  if(subservices){
+    itemListElement.push({
+      '@type': 'ListItem',
+      item: {
+        '@id': seo.urlSubservices,
+        name: title,
+      },
+      position: 3,
+    });
+  }
+
+  const breadcrumb = {
+    '@context': 'http://schema.org',
+    '@type': 'BreadcrumbList',
+    description: 'Breadcrumbs list',
+    name: 'Breadcrumbs',
+    itemListElement,
+  }
   return (
     <Helmet
       htmlAttributes={{
@@ -94,6 +187,8 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <script type="application/ld+json">{JSON.stringify(seoData)}</script>
+      <script type="application/ld+json">{JSON.stringify(seoLogo)}</script>
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
     </Helmet>
   )
 }

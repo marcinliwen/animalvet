@@ -8,7 +8,7 @@ module.exports = {
     description: `Gabinet Weterynaryjny - AnimalVet. Opieka, leczenie, porady.`,
     author: `MarcinL`,
     logo: '/img/logo.png',
-    siteURL: 'https://animalvettest.netlify.app/',
+    siteURL: 'https://animalvettest.netlify.app',
     phone_number: "+48506109445",
     phone_display: "+48 506 109 445",
     whatsup_number: "48506109445",

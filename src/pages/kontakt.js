@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Helmet } from "react-helmet"
 
 
 import Subscribe from "../components/Subscribe"
@@ -30,24 +29,7 @@ const Kontakt = (props) => {
   
     return(
       <Layout>
-      <SEO title="Kontakt" />
-      <Helmet>
-        <script type="application/ld+json">
-          {`
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "url": "https://www.animalvet.com",
-                "name": "Spooky technologies",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+5-601-785-8543",
-                  "contactType": "Customer Support"
-                }
-              }
-            `}
-        </script>
-      </Helmet>
+      <SEO title="Kontakt" pathname={props.location.pathname}/>
       <Subheader title={"Dbamy z miłością"}/>
       <div className="container">
       <Breadcrumb
