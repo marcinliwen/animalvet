@@ -136,6 +136,10 @@
 .slider-nav .MuiSvgIcon-root {
   width: 32px;
 }
+.slider-nav>div>span {
+  width: 8px;
+  display: inline-block;
+}
   @media (min-width: 770px){
     .slider {
       width: calc(2*(100%/3));

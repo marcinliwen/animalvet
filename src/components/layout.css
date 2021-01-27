@@ -800,11 +800,15 @@ h1{
 }
 .welcome-content h1:after {
   content: "";
-  width: 50%;
+  width: 0%;
   height: 3px;
   background: #F24C3D;
   display: block;
   margin-top: 15px;
+  transition: width .5s ease-out;
+}
+.welcome-content h1.inview:after {
+  width: 50%;
 }
 .welcome-opening {
   display: flex;
@@ -850,6 +854,7 @@ section#uslugi {
   padding-top: 36px;
   padding-bottom: 36px;
   border-bottom: 1px solid #000;
+  opacity: 0;
 }
 
 .uslugi-cart-title img {

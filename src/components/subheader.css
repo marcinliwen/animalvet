@@ -33,8 +33,10 @@
     max-width: 250px;
 }
 
-.subheader .-content h2:after {content: "";height: 3px;width: 60%;background: #F24C3D;display: block;margin-top: 8px;}
-
+.subheader .-content h2:after {content: "";height: 3px;width: 0;background: #F24C3D;display: block;margin-top: 8px;transition: width .5s ease-out;}
+.subheader .-content h2.inview:after {
+    width: 60%;
+}
 @media (min-width: 770px){
     .subheader .-content h2 {
         font-size: 74px;

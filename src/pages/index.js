@@ -8,6 +8,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
+import { InView } from 'react-intersection-observer';
 
 import ArrowRight from "../components/Icons/ArrowR"
 
@@ -41,7 +42,12 @@ const IndexPage = props => {
     <section id="welcome">
       <div className="container">
         <div className="welcome-content">
-          <h1>AnimalVet</h1>
+        <InView triggerOnce delay={7000}>
+            {({ inView, ref, entry }) => ( 
+                <h1 className={inView? "inview": ""} ref={ref}>AnimalVet</h1>
+            )}
+        </InView>
+        
           <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
           <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#F24C3D">Umów wizytę</Button></Link>
         </div>
@@ -68,65 +74,6 @@ const IndexPage = props => {
           services={services}
           isHomepage={true}
         />
-        {/*<div className="uslugi-content row">
-        
-          <div className="uslugi-cart col-4">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={surgery} alt="Hirurgia"/></div>
-              <h3>Chirurgia</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonnujemy zabiegi hirurgiczne.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart col-4">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={rtg} alt="RTG"/></div>
-              <h3>Diagnostyka</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy zdjęcia RTG.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart col-4">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={profilactic} alt="profilaktyka"/></div>
-              <h3>Profilaktyka</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy badania krwi, moczu oraz wysyłamy próbki tkanek w przypadku badań histologicznych i cytologicznych.Prowadzimy diagnostykę alergii, chorób zakaźnych i genetycznych.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart col-4">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={vaccine} alt="Szczepienie"/></div>
-              <h3>Szczepienie</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy szczepienia psów, kotów oraz królików. Zarówno te wstępne jak i coroczne.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart col-4">
-            <div className="uslugi-cart-title">
-              <div className="uslugi-icon"><img src={bandage} alt="Ortopedia"/></div>
-              <h3>Ortopedia</h3>
-            </div>
-            <div className="desc">
-              <p>Wykonujemy osteosyntezę, leczenie zerwanych więzadeł oraz wad kostnych wrodzonych i nabytych.</p>
-              <a className="uslugi-more"><span>Dowiedz się więcej </span><ArrowRight /></a>
-            </div>
-          </div>
-          <div className="uslugi-cart for-btn col-4">
-          <Link to="/uslugi" >
-            <Button color="#fff" background="#F24C3D">Poznaj nasze usługi </Button>
-          </Link>
-          </div>
-          
-  </div>*/}
       </div>
     </section>
     <section id="office">
@@ -223,7 +170,7 @@ query {
       }
     }
   },
-  imgOffice : file(relativePath: {eq: "office.jpg"}){
+  imgOffice : file(relativePath: {eq: "office.png"}){
     childImageSharp {
       fluid{
         ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -21,10 +21,10 @@ const Header = (props) => {
     // Zaktualizuj tytuł dokumentu korzystając z interfejsu API przeglądarki
     if(menu){
       document.querySelector("html").classList.add('menu-open')
-      console.log(document.querySelector("html"))
+      //console.log(document.querySelector("html"))
     }
     else{ 
-      console.log(document.querySelector("html"))
+      //console.log(document.querySelector("html"))
       document.querySelector("html").classList.remove('menu-open')
     }
   });
@@ -37,7 +37,7 @@ const Header = (props) => {
 
   const { phone_number , phone_display } = useKontaktInfo();
 
-  console.log(props.logo);
+  //console.log(props.logo);
   return(
   <header>    
      <div
