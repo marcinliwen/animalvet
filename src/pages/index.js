@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 import { InView } from 'react-intersection-observer';
+import { useIntl,Link,  FormattedMessage } from "gatsby-plugin-intl"
 
 import ArrowRight from "../components/Icons/ArrowR"
 
@@ -48,8 +49,8 @@ const IndexPage = props => {
             )}
         </InView>
         
-          <p>Gabinet weterynaryjny małych zwierząt. Opieka, szczepienia, zabiegi, porady.</p>
-          <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#F24C3D">Umów wizytę</Button></Link>
+          <p><FormattedMessage id="main_subtitle"/></p>
+          <Link to="/kontakt#kontakt-form"><Button color="#fff" background="#F24C3D">  <FormattedMessage id="appointment" /></Button></Link>
         </div>
         <div className="welcome-img">
         <Img fluid={props.data.imgOne.childImageSharp.fluid} />

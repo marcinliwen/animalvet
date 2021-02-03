@@ -1,11 +1,14 @@
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 
 import PropTypes from "prop-types"
 import React, {useState, useEffect} from "react"
 import { globalHistory as history } from '@reach/router'
+import LanguageSelect from "./LanguageSelect"
 
 import { useMenuLinks } from "../hooks/navigation-links"
 import { useKontaktInfo } from "../hooks/kontakt-hook"
+
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import menu_btn from "./../images/menu.svg"
 import menu_close from "./../images/cancel.svg"
@@ -38,6 +41,7 @@ const Header = (props) => {
   const { phone_number , phone_display } = useKontaktInfo();
 
   //console.log(props.logo);
+  const intl = useIntl()
   return(
   <header>    
      <div
@@ -81,7 +85,7 @@ const Header = (props) => {
               activeClass="active"
               onClick={toggleHamburger}
               className={`navbar-item ${currentLocation.includes(link.link) ? "active" :""}`} 
-            >{link.name}</Link>
+            >{/*link.name*/}{intl.formatMessage({ id: link.id })}</Link>
             {link.submenuLink!=null
             ?<ul className="submenu">
               {link.submenuLink.map(sublink=>(
@@ -132,6 +136,7 @@ const Header = (props) => {
       */}
         {/*<div className="contact mobile"><div><a href={`tel:${phone_number}`}>{phone_display}</a> </div></div>*/}
         </nav>
+        <LanguageSelect />
         <div className="nav_back"  onClick={toggleHamburger}></div>
         <div className="h_banner">
         <div className="contact">
@@ -141,6 +146,7 @@ const Header = (props) => {
         </div>
       </div>
     </div>
+   
     </div>
   </header>
 )}
